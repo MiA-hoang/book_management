@@ -32,9 +32,9 @@ namespace QuanLyCuaHangSach
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            fNhanVien f = new fNhanVien();       
+            Admin ad = new Admin();       
             this.Hide();
-            f.ShowDialog();
+            ad.ShowDialog();
             this.Show();
         }
 
