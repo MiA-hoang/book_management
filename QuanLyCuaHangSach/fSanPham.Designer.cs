@@ -48,9 +48,23 @@
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.picSach = new System.Windows.Forms.PictureBox();
             this.btnChonAnh = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.lblTuKhoa = new System.Windows.Forms.Label();
+            this.lblDanhMuc = new System.Windows.Forms.Label();
+            this.cboLocDanhMuc = new System.Windows.Forms.ComboBox();
+            this.lblGia = new System.Windows.Forms.Label();
+            this.txtGiaMin = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtGiaMax = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cboTonKho = new System.Windows.Forms.ComboBox();
+            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.btnLoc = new System.Windows.Forms.Button();
             this.pnlTop.SuspendLayout();
             this.grpThongTinSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSach)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTop
@@ -134,7 +148,7 @@
             this.grpThongTinSach.Controls.Add(this.txtMaSach);
             this.grpThongTinSach.Controls.Add(this.label1);
             this.grpThongTinSach.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpThongTinSach.Location = new System.Drawing.Point(20, 108);
+            this.grpThongTinSach.Location = new System.Drawing.Point(20, 96);
             this.grpThongTinSach.Name = "grpThongTinSach";
             this.grpThongTinSach.Size = new System.Drawing.Size(850, 180);
             this.grpThongTinSach.TabIndex = 1;
@@ -261,6 +275,143 @@
             this.btnChonAnh.Text = "Chọn ảnh";
             this.btnChonAnh.UseVisualStyleBackColor = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnLoc);
+            this.groupBox1.Controls.Add(this.btnTimKiem);
+            this.groupBox1.Controls.Add(this.cboTonKho);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txtGiaMax);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtGiaMin);
+            this.groupBox1.Controls.Add(this.lblGia);
+            this.groupBox1.Controls.Add(this.cboLocDanhMuc);
+            this.groupBox1.Controls.Add(this.lblDanhMuc);
+            this.groupBox1.Controls.Add(this.lblTuKhoa);
+            this.groupBox1.Controls.Add(this.txtTimKiem);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(20, 290);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(850, 110);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tìm kiếm và Lọc";
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(10, 52);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(131, 30);
+            this.txtTimKiem.TabIndex = 0;
+            // 
+            // lblTuKhoa
+            // 
+            this.lblTuKhoa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTuKhoa.Location = new System.Drawing.Point(6, 26);
+            this.lblTuKhoa.Name = "lblTuKhoa";
+            this.lblTuKhoa.Size = new System.Drawing.Size(85, 23);
+            this.lblTuKhoa.TabIndex = 1;
+            this.lblTuKhoa.Text = "Từ khóa";
+            // 
+            // lblDanhMuc
+            // 
+            this.lblDanhMuc.AutoSize = true;
+            this.lblDanhMuc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDanhMuc.Location = new System.Drawing.Point(155, 26);
+            this.lblDanhMuc.Name = "lblDanhMuc";
+            this.lblDanhMuc.Size = new System.Drawing.Size(76, 20);
+            this.lblDanhMuc.TabIndex = 2;
+            this.lblDanhMuc.Text = "Danh Mục";
+            // 
+            // cboLocDanhMuc
+            // 
+            this.cboLocDanhMuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboLocDanhMuc.FormattingEnabled = true;
+            this.cboLocDanhMuc.Location = new System.Drawing.Point(159, 52);
+            this.cboLocDanhMuc.Name = "cboLocDanhMuc";
+            this.cboLocDanhMuc.Size = new System.Drawing.Size(140, 31);
+            this.cboLocDanhMuc.TabIndex = 3;
+            // 
+            // lblGia
+            // 
+            this.lblGia.AutoSize = true;
+            this.lblGia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGia.Location = new System.Drawing.Point(388, 30);
+            this.lblGia.Name = "lblGia";
+            this.lblGia.Size = new System.Drawing.Size(31, 20);
+            this.lblGia.TabIndex = 4;
+            this.lblGia.Text = "Giá";
+            // 
+            // txtGiaMin
+            // 
+            this.txtGiaMin.Location = new System.Drawing.Point(316, 53);
+            this.txtGiaMin.Name = "txtGiaMin";
+            this.txtGiaMin.Size = new System.Drawing.Size(80, 30);
+            this.txtGiaMin.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(402, 55);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(17, 23);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "-";
+            // 
+            // txtGiaMax
+            // 
+            this.txtGiaMax.Location = new System.Drawing.Point(425, 53);
+            this.txtGiaMax.Name = "txtGiaMax";
+            this.txtGiaMax.Size = new System.Drawing.Size(80, 30);
+            this.txtGiaMax.TabIndex = 7;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(546, 30);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 20);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Tồn kho";
+            // 
+            // cboTonKho
+            // 
+            this.cboTonKho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTonKho.FormattingEnabled = true;
+            this.cboTonKho.Items.AddRange(new object[] {
+            "Tất cả",
+            "Còn hàng",
+            "Hết hàng"});
+            this.cboTonKho.Location = new System.Drawing.Point(521, 53);
+            this.cboTonKho.Name = "cboTonKho";
+            this.cboTonKho.Size = new System.Drawing.Size(120, 31);
+            this.cboTonKho.TabIndex = 9;
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.BackColor = System.Drawing.Color.White;
+            this.btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Location = new System.Drawing.Point(695, 22);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(90, 35);
+            this.btnTimKiem.TabIndex = 10;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            // 
+            // btnLoc
+            // 
+            this.btnLoc.BackColor = System.Drawing.Color.White;
+            this.btnLoc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoc.Location = new System.Drawing.Point(695, 63);
+            this.btnLoc.Name = "btnLoc";
+            this.btnLoc.Size = new System.Drawing.Size(90, 35);
+            this.btnLoc.TabIndex = 11;
+            this.btnLoc.Text = "Lọc";
+            this.btnLoc.UseVisualStyleBackColor = false;
+            // 
             // fSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -268,6 +419,7 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(882, 553);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpThongTinSach);
             this.Controls.Add(this.pnlTop);
             this.Name = "fSanPham";
@@ -276,6 +428,8 @@
             this.grpThongTinSach.ResumeLayout(false);
             this.grpThongTinSach.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSach)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -302,5 +456,18 @@
         private System.Windows.Forms.Button btnChonAnh;
         private System.Windows.Forms.PictureBox picSach;
         private System.Windows.Forms.TextBox txtSoLuong;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblTuKhoa;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.ComboBox cboLocDanhMuc;
+        private System.Windows.Forms.Label lblDanhMuc;
+        private System.Windows.Forms.TextBox txtGiaMax;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtGiaMin;
+        private System.Windows.Forms.Label lblGia;
+        private System.Windows.Forms.ComboBox cboTonKho;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnLoc;
+        private System.Windows.Forms.Button btnTimKiem;
     }
 }
