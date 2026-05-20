@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/QuanLyCuaHangSach/.vs
+/QuanLyCuaHangSach/bin/x86/Debug
+/.vs/QuanLyCuaHangSach.slnx/v18/.suo
+/.vs/QuanLyCuaHangSach.slnx/v18/DocumentLayout.backup.json
+/.vs/QuanLyCuaHangSach.slnx/v18/DocumentLayout.json
