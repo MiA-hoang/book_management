@@ -15,3 +15,6 @@ D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.nvKho.resources
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\Guna.UI2.dll
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCu.C3400158.Up2Date
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmBCKinhDoanh.resources
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\Database.mdf
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\Database_log.ldf

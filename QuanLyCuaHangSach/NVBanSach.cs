@@ -24,5 +24,15 @@ namespace QuanLyCuaHangSach
             change.ShowDialog();
             this.Show();
         }
+
+        private void LoadFormToPanel(Form childForm)
+        {
+            pContent.Controls.Clear();
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pContent.Controls.Add(childForm);
+            childForm.Show();
+        }
     }
 }
