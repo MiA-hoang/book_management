@@ -7,17 +7,14 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
 
-namespace QuanLyCuaHangSach.DAO
+namespace QuanLyCuaHangSach
 {
     internal class DAO
     {
         public static string ConnectionString =
-            @"Data Source=NGOCHA\SQLEXPRESS;
-              Initial Catalog=QuanLyCuaHangSach;
-              Integrated Security=True;
-              Connect Timeout=30;
-              Encrypt=True;
-              TrustServerCertificate=True;";
+            @"Data Source=(LocalDB)\MSSQLLocalDB;
+            AttachDbFilename=|DataDirectory|\Database.mdf;
+            Integrated Security=True";
 
         public static SqlConnection con = new SqlConnection();
 
