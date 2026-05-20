@@ -15,3 +15,23 @@ D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.nvKho.resources
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\Guna.UI2.dll
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCu.C3400158.Up2Date
+G:\C#\book_management\QuanLyCuaHangSach\bin\Debug\Database.mdf
+G:\C#\book_management\QuanLyCuaHangSach\bin\Debug\Database_log.ldf
+G:\C#\book_management\QuanLyCuaHangSach\bin\Debug\QuanLyCuaHangSach.exe.config
+G:\C#\book_management\QuanLyCuaHangSach\bin\Debug\QuanLyCuaHangSach.exe
+G:\C#\book_management\QuanLyCuaHangSach\bin\Debug\QuanLyCuaHangSach.pdb
+G:\C#\book_management\QuanLyCuaHangSach\bin\Debug\Guna.UI2.dll
+G:\C#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.csproj.AssemblyReference.cache
+G:\C#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.Admin.resources
+G:\C#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.fChangePassWord.resources
+G:\C#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.fLogin.resources
+G:\C#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.fNhanVien.resources
+G:\C#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmKhachHang.resources
+G:\C#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.NVBanSach.resources
+G:\C#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.nvKho.resources
+G:\C#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.Properties.Resources.resources
+G:\C#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.csproj.GenerateResource.cache
+G:\C#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.csproj.CoreCompileInputs.cache
+G:\C#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCu.C3400158.Up2Date
+G:\C#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.exe
+G:\C#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.pdb

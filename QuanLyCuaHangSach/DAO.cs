@@ -7,14 +7,16 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
 
-namespace QuanLyCuaHangSach.DAO
+namespace QuanLyCuaHangSach
 {
     internal class DAO
     {
         public static string ConnectionString =
             @"Data Source=(LocalDB)\MSSQLLocalDB;
+
  AttachDbFilename=|DataDirectory|\Database.mdf;
  Integrated Security=True";
+
 
         public static SqlConnection con = new SqlConnection();
 
