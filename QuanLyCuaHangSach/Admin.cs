@@ -16,25 +16,13 @@ namespace QuanLyCuaHangSach
         {
             InitializeComponent();
         }
-
-        private void btnLogOut_Click(object sender, EventArgs e)
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button10_Click(object sender, EventArgs e)
-        {
-
+            fChangePassWord change= new fChangePassWord();
+            this.Hide();
+            change.ShowDialog();
+            this.Show();
         }
     }
 }

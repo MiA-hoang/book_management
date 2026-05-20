@@ -17,6 +17,19 @@ namespace QuanLyCuaHangSach
             InitializeComponent();
         }
 
-       
+
+        private void check_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check.Checked == true)
+            {
+                txtCurrent.UseSystemPasswordChar = false;
+                txtNew.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtCurrent.UseSystemPasswordChar = true;
+                txtCurrent.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

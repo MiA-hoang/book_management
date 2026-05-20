@@ -16,5 +16,13 @@ namespace QuanLyCuaHangSach
         {
             InitializeComponent();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            fChangePassWord change = new fChangePassWord();
+            this.Hide();
+            change.ShowDialog();
+            this.Show();
+        }
     }
 }

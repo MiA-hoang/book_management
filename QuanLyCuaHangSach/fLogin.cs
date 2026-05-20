@@ -16,7 +16,7 @@ namespace QuanLyCuaHangSach
         {
             InitializeComponent();
         }
- 
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -24,23 +24,31 @@ namespace QuanLyCuaHangSach
 
         private void fLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(MessageBox.Show("Bạn có thật sự muốn thoát chương trình?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show("Bạn có thật sự muốn thoát chương trình?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
             {
                 e.Cancel = true;
             }
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
-            Admin ad = new Admin();       
+            Admin ad = new Admin();
             this.Hide();
             ad.ShowDialog();
             this.Show();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
+            if(checkBox1.Checked== true)
+            {
+                txbPassWord.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txbPassWord.UseSystemPasswordChar = true;
+            }
         }
+
     }
 }

@@ -11,3 +11,7 @@ D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.csproj.CoreCompileInputs.cache
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.exe
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.pdb
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.NVBanSach.resources
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.nvKho.resources
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\Guna.UI2.dll
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCu.C3400158.Up2Date

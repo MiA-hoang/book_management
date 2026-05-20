@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
@@ -40,8 +42,6 @@
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +62,28 @@
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(200, 500);
             this.guna2Panel3.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.SteelBlue;
+            this.label3.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(11, 452);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(143, 18);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Nhân viên bán sách";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.SteelBlue;
+            this.label2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(9, 428);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(157, 24);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "NGUYEN VAN A";
             // 
             // guna2Button6
             // 
@@ -195,6 +217,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(181, 45);
             this.guna2Button1.TabIndex = 0;
             this.guna2Button1.Text = "🔒 Đổi mật khẩu";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // btnLogOut
             // 
@@ -211,28 +234,6 @@
             this.btnLogOut.Size = new System.Drawing.Size(168, 45);
             this.btnLogOut.TabIndex = 0;
             this.btnLogOut.Text = "⏻ Đăng xuất";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.SteelBlue;
-            this.label2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 428);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 24);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "NGUYEN VAN A";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.SteelBlue;
-            this.label3.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 452);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 18);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Nhân viên bán sách";
             // 
             // NVBanSach
             // 
