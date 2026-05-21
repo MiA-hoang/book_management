@@ -34,17 +34,16 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.grpThongTinNCC = new System.Windows.Forms.GroupBox();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtSDT = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTenSach = new System.Windows.Forms.TextBox();
             this.lblTenNCC = new System.Windows.Forms.Label();
             this.txtMaSach = new System.Windows.Forms.TextBox();
             this.lblMaNCC = new System.Windows.Forms.Label();
-            this.btnLuu = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.grpTimKiem = new System.Windows.Forms.GroupBox();
@@ -52,6 +51,7 @@
             this.lblTuKhoa = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.dgvNCC = new System.Windows.Forms.DataGridView();
+            this.mskDienThoai = new System.Windows.Forms.MaskedTextBox();
             this.pnlTop.SuspendLayout();
             this.grpThongTinNCC.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -127,11 +127,11 @@
             // grpThongTinNCC
             // 
             this.grpThongTinNCC.BackColor = System.Drawing.Color.White;
+            this.grpThongTinNCC.Controls.Add(this.mskDienThoai);
             this.grpThongTinNCC.Controls.Add(this.btnLuu);
             this.grpThongTinNCC.Controls.Add(this.panel1);
             this.grpThongTinNCC.Controls.Add(this.txtDiaChi);
             this.grpThongTinNCC.Controls.Add(this.label6);
-            this.grpThongTinNCC.Controls.Add(this.txtSDT);
             this.grpThongTinNCC.Controls.Add(this.label3);
             this.grpThongTinNCC.Controls.Add(this.txtTenSach);
             this.grpThongTinNCC.Controls.Add(this.lblTenNCC);
@@ -144,6 +144,19 @@
             this.grpThongTinNCC.Size = new System.Drawing.Size(850, 165);
             this.grpThongTinNCC.TabIndex = 2;
             this.grpThongTinNCC.TabStop = false;
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Location = new System.Drawing.Point(695, 122);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(90, 37);
+            this.btnLuu.TabIndex = 15;
+            this.btnLuu.Text = "💾 Lưu";
+            this.btnLuu.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -181,13 +194,6 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Địa chỉ";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.Location = new System.Drawing.Point(419, 44);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(213, 30);
-            this.txtSDT.TabIndex = 5;
             // 
             // label3
             // 
@@ -236,19 +242,6 @@
             this.lblMaNCC.TabIndex = 0;
             this.lblMaNCC.Text = "Mã NCC";
             this.lblMaNCC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLuu.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(695, 122);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(90, 37);
-            this.btnLuu.TabIndex = 15;
-            this.btnLuu.Text = "💾 Lưu";
-            this.btnLuu.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -331,6 +324,13 @@
             this.dgvNCC.Size = new System.Drawing.Size(850, 159);
             this.dgvNCC.TabIndex = 4;
             // 
+            // mskDienThoai
+            // 
+            this.mskDienThoai.Location = new System.Drawing.Point(418, 44);
+            this.mskDienThoai.Name = "mskDienThoai";
+            this.mskDienThoai.Size = new System.Drawing.Size(212, 30);
+            this.mskDienThoai.TabIndex = 16;
+            // 
             // frmNhaCungCap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -372,7 +372,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTenSach;
         private System.Windows.Forms.Label lblTenNCC;
@@ -386,5 +385,6 @@
         private System.Windows.Forms.Label lblTuKhoa;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.DataGridView dgvNCC;
+        private System.Windows.Forms.MaskedTextBox mskDienThoai;
     }
 }
