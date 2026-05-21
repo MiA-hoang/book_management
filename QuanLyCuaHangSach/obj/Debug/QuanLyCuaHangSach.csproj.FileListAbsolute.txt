@@ -15,3 +15,22 @@ D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.nvKho.resources
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\Guna.UI2.dll
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCu.C3400158.Up2Date
+C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\bin\Debug\Database.mdf
+C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\bin\Debug\Database_log.ldf
+C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\bin\Debug\QuanLyCuaHangSach.exe.config
+C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\bin\Debug\QuanLyCuaHangSach.exe
+C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\bin\Debug\QuanLyCuaHangSach.pdb
+C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\bin\Debug\Guna.UI2.dll
+C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.Admin.resources
+C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.fChangePassWord.resources
+C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.fLogin.resources
+C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.fNhanVien.resources
+C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.NVBanSach.resources
+C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.nvKho.resources
+C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.Properties.Resources.resources
+C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCu.C3400158.Up2Date
+C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.exe
+C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.pdb

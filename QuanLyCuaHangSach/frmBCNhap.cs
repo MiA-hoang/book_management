@@ -16,5 +16,10 @@ namespace QuanLyCuaHangSach
         {
             InitializeComponent();
         }
+
+        private void frmBCNhap_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
