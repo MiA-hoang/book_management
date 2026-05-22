@@ -102,7 +102,8 @@
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.Size = new System.Drawing.Size(191, 36);
             this.guna2Button6.TabIndex = 2;
-            this.guna2Button6.Text = "📥 Nhập hàng";
+            this.guna2Button6.Text = "📥 Hóa đơn nhập";
+            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
             // guna2Button5
             // 
@@ -117,7 +118,8 @@
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.Size = new System.Drawing.Size(221, 36);
             this.guna2Button5.TabIndex = 2;
-            this.guna2Button5.Text = "🏪  Tồn kho";
+            this.guna2Button5.Text = "🏪 Tồn kho";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // guna2Button4
             // 
@@ -133,6 +135,7 @@
             this.guna2Button4.Size = new System.Drawing.Size(192, 36);
             this.guna2Button4.TabIndex = 2;
             this.guna2Button4.Text = "📦 Nhà cung cấp";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2Button7
             // 
@@ -163,6 +166,7 @@
             this.guna2Button3.Size = new System.Drawing.Size(200, 36);
             this.guna2Button3.TabIndex = 2;
             this.guna2Button3.Text = "📖 Tra cứu sách";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // label1
             // 

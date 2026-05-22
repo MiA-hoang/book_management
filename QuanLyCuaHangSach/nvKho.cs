@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +23,34 @@ namespace QuanLyCuaHangSach
             this.Hide();
             change.ShowDialog();
             this.Show();
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            // Mở trang Hóa đơn nhập
+            frmHoaDonNhap f = new frmHoaDonNhap();
+            f.ShowDialog();
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            // Mở trang Tồn kho (Tra cứu sách)
+            fSanPham f = new fSanPham();
+            f.ShowDialog();
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            // Mở trang Nhà cung cấp
+            frmNhaCungCap f = new frmNhaCungCap();
+            f.ShowDialog();
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            // Mở trang Tra cứu sách
+            fSanPham f = new fSanPham();
+            f.ShowDialog();
         }
     }
 }

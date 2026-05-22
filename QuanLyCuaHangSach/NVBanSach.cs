@@ -24,5 +24,26 @@ namespace QuanLyCuaHangSach
             change.ShowDialog();
             this.Show();
         }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            // Mở trang Khách hàng
+            frmKhachHang f = new frmKhachHang();
+            f.ShowDialog();
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            // Mở trang Lập hóa đơn bán (Hóa đơn xuất)
+            frmHoaDonXuat f = new frmHoaDonXuat();
+            f.ShowDialog();
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            // Mở trang Tra cứu sách (Sản phẩm)
+            fSanPham f = new fSanPham();
+            f.ShowDialog();
+        }
     }
 }

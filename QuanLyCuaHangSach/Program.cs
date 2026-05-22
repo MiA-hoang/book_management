@@ -16,7 +16,11 @@ namespace QuanLyCuaHangSach
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< Updated upstream
             Application.Run(new fLogin());
+=======
+            Application.Run(new frmHoaDonNhap());
+>>>>>>> Stashed changes
         }
     }
 }
