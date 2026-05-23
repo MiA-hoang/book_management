@@ -73,8 +73,17 @@ namespace QuanLyCuaHangSach
 
         private void guna2Button10_Click(object sender, EventArgs e)
         {
-         
             LoadFormToPanel(new frmBCBanHang());
+        }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            LoadFormToPanel(new frmHoaDonNhap());
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+            LoadFormToPanel(new frmHoaDonXuat());
         }
     }
 }
