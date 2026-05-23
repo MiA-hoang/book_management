@@ -16,5 +16,15 @@ namespace QuanLyCuaHangSach
         {
             InitializeComponent();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpTimKiem_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace QuanLyCuaHangSach
         {
             InitializeComponent();
         }
+
+        private void cboTonKho_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

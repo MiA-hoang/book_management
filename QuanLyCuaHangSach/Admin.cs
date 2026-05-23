@@ -52,11 +52,18 @@ namespace QuanLyCuaHangSach
             LoadFormToPanel(new fNhanVien());
         }
 
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            LoadFormToPanel(new fSanPham());
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            LoadFormToPanel(new frmNhaCungCap());
+        }
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-      
     }
 }

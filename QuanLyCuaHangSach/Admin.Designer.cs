@@ -176,6 +176,7 @@
             this.guna2Button5.Size = new System.Drawing.Size(305, 46);
             this.guna2Button5.TabIndex = 2;
             this.guna2Button5.Text = "📦 Nhà cung cấp";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // guna2Button4
             // 
@@ -283,6 +284,7 @@
             this.guna2Button3.Size = new System.Drawing.Size(296, 46);
             this.guna2Button3.TabIndex = 2;
             this.guna2Button3.Text = "📖 Tra cứu sách";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // label1
             // 
