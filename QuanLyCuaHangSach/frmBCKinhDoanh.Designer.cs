@@ -34,11 +34,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -46,7 +44,6 @@
             this.panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
-            this.guna2CustomGradientPanel3.SuspendLayout();
             this.guna2CustomGradientPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,24 +114,6 @@
             this.guna2CustomGradientPanel1.TabIndex = 1;
             this.guna2CustomGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
             // 
-            // guna2CustomGradientPanel2
-            // 
-            this.guna2CustomGradientPanel2.Controls.Add(this.label4);
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(12, 162);
-            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(147, 71);
-            this.guna2CustomGradientPanel2.TabIndex = 1;
-            this.guna2CustomGradientPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
-            // 
-            // guna2CustomGradientPanel3
-            // 
-            this.guna2CustomGradientPanel3.Controls.Add(this.label5);
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(684, 91);
-            this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(182, 71);
-            this.guna2CustomGradientPanel3.TabIndex = 1;
-            this.guna2CustomGradientPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -144,6 +123,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tổng doanh thu";
             // 
+            // guna2CustomGradientPanel2
+            // 
+            this.guna2CustomGradientPanel2.Controls.Add(this.label4);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(12, 162);
+            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(147, 71);
+            this.guna2CustomGradientPanel2.TabIndex = 1;
+            this.guna2CustomGradientPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -152,15 +140,6 @@
             this.label4.Size = new System.Drawing.Size(134, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Tổng chi phí nhập";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(53, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 20);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Lợi nhuận";
             // 
             // label6
             // 
@@ -206,11 +185,10 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(673, 500);
+            this.ClientSize = new System.Drawing.Size(690, 500);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.guna2CustomGradientPanel2);
-            this.Controls.Add(this.guna2CustomGradientPanel3);
             this.Controls.Add(this.guna2CustomGradientPanel4);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.panel1);
@@ -225,8 +203,6 @@
             this.guna2CustomGradientPanel1.PerformLayout();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
-            this.guna2CustomGradientPanel3.ResumeLayout(false);
-            this.guna2CustomGradientPanel3.PerformLayout();
             this.guna2CustomGradientPanel4.ResumeLayout(false);
             this.guna2CustomGradientPanel4.PerformLayout();
             this.ResumeLayout(false);
@@ -243,10 +219,8 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;

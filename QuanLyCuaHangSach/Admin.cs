@@ -15,15 +15,18 @@ namespace QuanLyCuaHangSach
         public Admin()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
+            this.StartPosition = FormStartPosition.CenterScreen;
+
         }
+
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
-            fChangePassWord change= new fChangePassWord();
+            fChangePassWord change = new fChangePassWord();
             this.Hide();
             change.ShowDialog();
-            this.Show();
         }
+
         private void LoadFormToPanel(Form childForm)
         {
             pContent.Controls.Clear();
@@ -38,5 +41,22 @@ namespace QuanLyCuaHangSach
         {
             LoadFormToPanel(new frmBCKinhDoanh());
         }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            LoadFormToPanel(new frmKhachHang());
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            LoadFormToPanel(new fNhanVien());
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+      
     }
 }

@@ -17,10 +17,6 @@ namespace QuanLyCuaHangSach
             InitializeComponent();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void fLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -35,7 +31,8 @@ namespace QuanLyCuaHangSach
             Admin ad = new Admin();
             this.Hide();
             ad.ShowDialog();
-            this.Show();
+            if (!this.IsDisposed)
+                this.Show();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -50,5 +47,9 @@ namespace QuanLyCuaHangSach
             }
         }
 
+        private void btnExit_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -27,11 +27,11 @@ namespace QuanLyCuaHangSach
 
         private void LoadFormToPanel(Form childForm)
         {
-            pContent.Controls.Clear();
+            guna2CustomGradientPanel1.Controls.Clear();
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            pContent.Controls.Add(childForm);
+            guna2CustomGradientPanel1.Controls.Add(childForm);
             childForm.Show();
         }
     }

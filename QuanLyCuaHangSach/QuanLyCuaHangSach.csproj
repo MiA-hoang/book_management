@@ -172,6 +172,9 @@
     <EmbeddedResource Include="frmBCKinhDoanh.resx">
       <DependentUpon>frmBCKinhDoanh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmKhachHang.resx">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NVBanSach.resx">
       <DependentUpon>NVBanSach.cs</DependentUpon>
     </EmbeddedResource>
