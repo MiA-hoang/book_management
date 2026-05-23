@@ -28,7 +28,7 @@ namespace QuanLyCuaHangSach
 
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
-            Admin ad = new Admin();
+            NVBanSach ad = new NVBanSach();
             this.Hide();
             ad.ShowDialog();
             if (!this.IsDisposed)
