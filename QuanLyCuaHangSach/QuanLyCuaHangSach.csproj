@@ -169,8 +169,14 @@
     <EmbeddedResource Include="fNhanVien.resx">
       <DependentUpon>fNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBCBanHang.resx">
+      <DependentUpon>frmBCBanHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBCKinhDoanh.resx">
       <DependentUpon>frmBCKinhDoanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBCNhap.resx">
+      <DependentUpon>frmBCNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>

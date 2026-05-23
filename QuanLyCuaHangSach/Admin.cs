@@ -65,5 +65,16 @@ namespace QuanLyCuaHangSach
         {
             this.Close();
         }
+
+        private void guna2Button11_Click(object sender, EventArgs e)
+        {
+            LoadFormToPanel(new frmBCNhap());
+        }
+
+        private void guna2Button10_Click(object sender, EventArgs e)
+        {
+         
+            LoadFormToPanel(new frmBCBanHang());
+        }
     }
 }

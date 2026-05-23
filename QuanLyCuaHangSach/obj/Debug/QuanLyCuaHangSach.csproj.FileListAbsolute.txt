@@ -21,3 +21,5 @@ D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\Database_log.ldf
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmKhachHang.resources
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.fSanPham.resources
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmNhaCungCap.resources
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmBCBanHang.resources
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmBCNhap.resources
