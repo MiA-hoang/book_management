@@ -12,9 +12,9 @@ namespace QuanLyCuaHangSach
     internal class DAO
     {
         public static string ConnectionString =
-            @"Data Source=(LocalDB)\MSSQLLocalDB;
- AttachDbFilename=|DataDirectory|\Database.mdf;
- Integrated Security=True";
+            @"Data Source=LAPTOP-KE984BFH\SQLEXPRESS;
+      Initial Catalog=QLCHSACH;
+      Integrated Security=True";
 
         public static SqlConnection con = new SqlConnection();
 
