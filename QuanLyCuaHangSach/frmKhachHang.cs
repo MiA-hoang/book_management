@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< Updated upstream
+=======
+using System.Data.SqlClient;
+
+>>>>>>> Stashed changes
 
 namespace QuanLyCuaHangSach
 {

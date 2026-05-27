@@ -15,6 +15,7 @@ D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.nvKho.resources
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\Guna.UI2.dll
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCu.C3400158.Up2Date
+<<<<<<< Updated upstream
 C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\bin\Debug\Database.mdf
 C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\bin\Debug\Database_log.ldf
 C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\bin\Debug\QuanLyCuaHangSach.exe.config
@@ -34,3 +35,58 @@ C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\Debug\
 C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCu.C3400158.Up2Date
 C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.exe
 C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.pdb
+=======
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmBCKinhDoanh.resources
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\Database.mdf
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\Database_log.ldf
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmKhachHang.resources
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.fSanPham.resources
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmNhaCungCap.resources
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmBCBanHang.resources
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmBCNhap.resources
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmHoaDonNhap.resources
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmHoaDonXuat.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\Database.mdf
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\Database_log.ldf
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\QuanLyCuaHangSach.exe.config
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\QuanLyCuaHangSach.exe
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\QuanLyCuaHangSach.pdb
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\Guna.UI2.dll
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.Admin.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.fChangePassWord.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.fLogin.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.fNhanVien.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmBCBanHang.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmBCKinhDoanh.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmBCNhap.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmHoaDonNhap.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmHoaDonXuat.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmKhachHang.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmNhaCungCap.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.fSanPham.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.NVBanSach.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.nvKho.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.Properties.Resources.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCu.C3400158.Up2Date
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.exe
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.pdb
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\EPPlus.dll
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\System.Buffers.dll
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\System.Memory.dll
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\System.Security.Cryptography.Xml.dll
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\EPPlus.xml
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\System.Buffers.xml
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\System.Memory.xml
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\bin\Debug\System.Security.Cryptography.Xml.xml
+>>>>>>> Stashed changes
