@@ -1,0 +1,98 @@
+﻿using System;
+using System.Drawing;
+using System.Drawing.Printing;
+using System.Windows.Forms;
+
+namespace QuanLyCuaHangSach
+{
+    // Simple helper to render invoice content from a DataGridView
+    public class InvoicePrinter
+    {
+        public string Title { get; set; }
+        public string InvoiceNumber { get; set; }
+        public DateTime InvoiceDate { get; set; }
+        public string PartyLabel { get; set; }
+        public string PartyName { get; set; }
+        public DataGridView Data { get; set; }
+        public string TotalText { get; set; }
+
+        private int currentRow = 0;
+
+        public void PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            int left = 40;
+            int top = 40;
+            int lineHeight = 25;
+
+            // Title
+            using (Font titleFont = new Font("Arial", 16, FontStyle.Bold))
+            using (StringFormat sf = new StringFormat() { Alignment = StringAlignment.Center })
+            {
+                g.DrawString(Title ?? "HÓA ĐƠN", titleFont, Brushes.Black, e.PageBounds.Width / 2, top, sf);
+                top += 40;
+            }
+
+            // Header info
+            using (Font hdrFont = new Font("Arial", 10))
+            {
+                g.DrawString("Mã hóa đơn: " + (InvoiceNumber ?? ""), hdrFont, Brushes.Black, left, top);
+                g.DrawString("Ngày: " + InvoiceDate.ToString("dd/MM/yyyy"), hdrFont, Brushes.Black, left + 300, top);
+                top += lineHeight;
+                g.DrawString(PartyLabel + ": " + (PartyName ?? ""), hdrFont, Brushes.Black, left, top);
+                top += lineHeight * 2;
+            }
+
+            // Table header
+            using (Font colFont = new Font("Arial", 10, FontStyle.Bold))
+            {
+                int x = left;
+                g.DrawString("Mã", colFont, Brushes.Black, x, top); x += 100;
+                g.DrawString("Tên sách", colFont, Brushes.Black, x, top); x += 200;
+                g.DrawString("SL", colFont, Brushes.Black, x, top); x += 60;
+                g.DrawString("Đơn giá", colFont, Brushes.Black, x, top); x += 100;
+                g.DrawString("Thành tiền", colFont, Brushes.Black, x, top);
+                top += lineHeight;
+            }
+
+            // Table rows
+            using (Font rowFont = new Font("Arial", 10))
+            {
+                while (currentRow < Data.Rows.Count)
+                {
+                    DataGridViewRow row = Data.Rows[currentRow];
+                    if (row.IsNewRow) { currentRow++; continue; }
+
+                    int x = left;
+                    g.DrawString(Convert.ToString(row.Cells[0].Value), rowFont, Brushes.Black, x, top); x += 100;
+                    g.DrawString(Convert.ToString(row.Cells[1].Value), rowFont, Brushes.Black, x, top); x += 200;
+                    g.DrawString(Convert.ToString(row.Cells[2].Value), rowFont, Brushes.Black, x, top); x += 60;
+                    g.DrawString(Convert.ToString(row.Cells[3].Value), rowFont, Brushes.Black, x, top); x += 100;
+                    g.DrawString(Convert.ToString(row.Cells[4].Value), rowFont, Brushes.Black, x, top);
+                    top += lineHeight;
+
+                    // Check for page break
+                    if (top + 100 > e.PageBounds.Height)
+                    {
+                        currentRow++;
+                        e.HasMorePages = true;
+                        return;
+                    }
+
+                    currentRow++;
+                }
+            }
+
+            // Footer totals
+            using (Font fnt = new Font("Arial", 10, FontStyle.Bold))
+            {
+                top += 10;
+                g.DrawString("Tổng: " + (TotalText ?? "0"), fnt, Brushes.Black, left + 300, top);
+            }
+
+            // Reset for next print
+            currentRow = 0;
+            e.HasMorePages = false;
+        }
+    }
+}

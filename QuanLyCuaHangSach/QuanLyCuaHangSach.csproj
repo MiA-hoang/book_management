@@ -143,6 +143,7 @@
     <Compile Include="fSanPham.Designer.cs">
       <DependentUpon>fSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="InvoicePrinter.cs" />
     <Compile Include="NVBanSach.cs">
       <SubType>Form</SubType>
     </Compile>

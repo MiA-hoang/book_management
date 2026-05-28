@@ -20,11 +20,13 @@ namespace QuanLyCuaHangSach
 
         public static void Connect()
         {
-            con.ConnectionString = ConnectionString;
             try
             {
-                if (con != null && con.State == ConnectionState.Closed)
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.ConnectionString = ConnectionString;
                     con.Open();
+                }
             }
             catch (Exception ex)
             {
@@ -64,21 +66,48 @@ namespace QuanLyCuaHangSach
             SqlDataAdapter mydataAdapter = new SqlDataAdapter(sql, con);
             DataTable dt = new DataTable();
             mydataAdapter.Fill(dt);
-            cmb.DataSource = dt;
+            // Set ValueMember and DisplayMember BEFORE DataSource to prevent premature SelectedIndexChanged event
             cmb.ValueMember = Keyvalue;
             cmb.DisplayMember = DisplayValue;
+            cmb.DataSource = dt;
+            cmb.SelectedIndex = -1; // Reset selection to avoid triggering events with incomplete binding
         }
 
         public static string getFieldValue(string sql)
         {
             string value = "";
-            SqlCommand cmd = new SqlCommand(sql, con);
-            SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            try
             {
-                value = reader.GetValue(0).ToString();
+                if (con == null || con.State != ConnectionState.Open)
+                {
+                    Connect();
+                }
+                using (SqlCommand cmd = new SqlCommand(sql, con))
+                {
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        value = result.ToString();
+                        // Check if the value is "System.Data.DataRowView" which indicates incorrect data binding
+                        if (value == "System.Data.DataRowView")
+                        {
+                            throw new InvalidOperationException(
+                                "Lỗi: Giá trị trả về là DataRowView. Vui lòng kiểm tra việc truyền tham số từ ComboBox/DataGridView. " +
+                                "Sử dụng SelectedValue hoặc truy cập cột cụ thể thay vì ToString() trên DataRowView.");
+                        }
+                    }
+                }
             }
-            reader.Close();
+            catch (InvalidOperationException)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi thực thi truy vấn: {ex.Message}\n\nSQL: {sql}",
+                    "Lỗi truy vấn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
             return value;
         }
 
