@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< Updated upstream
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -36,15 +35,6 @@
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-=======
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
->>>>>>> Stashed changes
             this.lblTongSoSachBan = new System.Windows.Forms.Label();
             this.lblTongDoanhThu = new System.Windows.Forms.Label();
             this.lblTongSoDon = new System.Windows.Forms.Label();
@@ -69,9 +59,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btnLamMoi = new System.Windows.Forms.Button();
-            this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnInBaoCao = new System.Windows.Forms.Button();
-            this.btnTroLai = new System.Windows.Forms.Button();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartTiLeDanhMuc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartSachBan)).BeginInit();
@@ -83,17 +72,11 @@
             // 
             this.lblTongSoSachBan.AutoSize = true;
             this.lblTongSoSachBan.BackColor = System.Drawing.Color.White;
-            this.lblTongSoSachBan.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTongSoSachBan.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblTongSoSachBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(100)))));
-<<<<<<< Updated upstream
-            this.lblTongSoSachBan.Location = new System.Drawing.Point(279, 342);
-            this.lblTongSoSachBan.Name = "lblTongSoSachBan";
-            this.lblTongSoSachBan.Size = new System.Drawing.Size(101, 13);
-=======
             this.lblTongSoSachBan.Location = new System.Drawing.Point(442, 469);
             this.lblTongSoSachBan.Name = "lblTongSoSachBan";
-            this.lblTongSoSachBan.Size = new System.Drawing.Size(133, 21);
->>>>>>> Stashed changes
+            this.lblTongSoSachBan.Size = new System.Drawing.Size(102, 15);
             this.lblTongSoSachBan.TabIndex = 34;
             this.lblTongSoSachBan.Text = "Tổng số sách bán:";
             // 
@@ -101,17 +84,11 @@
             // 
             this.lblTongDoanhThu.AutoSize = true;
             this.lblTongDoanhThu.BackColor = System.Drawing.Color.White;
-            this.lblTongDoanhThu.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTongDoanhThu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblTongDoanhThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(100)))));
-<<<<<<< Updated upstream
-            this.lblTongDoanhThu.Location = new System.Drawing.Point(279, 391);
-            this.lblTongDoanhThu.Name = "lblTongDoanhThu";
-            this.lblTongDoanhThu.Size = new System.Drawing.Size(95, 13);
-=======
             this.lblTongDoanhThu.Location = new System.Drawing.Point(442, 569);
             this.lblTongDoanhThu.Name = "lblTongDoanhThu";
-            this.lblTongDoanhThu.Size = new System.Drawing.Size(123, 21);
->>>>>>> Stashed changes
+            this.lblTongDoanhThu.Size = new System.Drawing.Size(95, 15);
             this.lblTongDoanhThu.TabIndex = 33;
             this.lblTongDoanhThu.Text = "Tổng doanh thu:";
             // 
@@ -119,17 +96,11 @@
             // 
             this.lblTongSoDon.AutoSize = true;
             this.lblTongSoDon.BackColor = System.Drawing.Color.White;
-            this.lblTongSoDon.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTongSoDon.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblTongSoDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(100)))));
-<<<<<<< Updated upstream
-            this.lblTongSoDon.Location = new System.Drawing.Point(279, 297);
-            this.lblTongSoDon.Name = "lblTongSoDon";
-            this.lblTongSoDon.Size = new System.Drawing.Size(76, 13);
-=======
             this.lblTongSoDon.Location = new System.Drawing.Point(441, 372);
             this.lblTongSoDon.Name = "lblTongSoDon";
-            this.lblTongSoDon.Size = new System.Drawing.Size(100, 21);
->>>>>>> Stashed changes
+            this.lblTongSoDon.Size = new System.Drawing.Size(76, 15);
             this.lblTongSoDon.TabIndex = 32;
             this.lblTongSoDon.Text = "Tổng số đơn:";
             // 
@@ -148,15 +119,11 @@
             this.groupBox1.Controls.Add(this.txtTenSach);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.Color.CadetBlue;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-<<<<<<< Updated upstream
-            this.groupBox1.Size = new System.Drawing.Size(353, 170);
-=======
             this.groupBox1.Size = new System.Drawing.Size(666, 229);
->>>>>>> Stashed changes
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Báo cáo công việc bán hàng";
@@ -165,36 +132,20 @@
             // 
             this.cboTrangThaiDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTrangThaiDon.FormattingEnabled = true;
-<<<<<<< Updated upstream
-            this.cboTrangThaiDon.Items.AddRange(new object[] {
-            "Từ lớn đến bé",
-            "",
-            "Từ bé đến lớn"});
-            this.cboTrangThaiDon.Location = new System.Drawing.Point(116, 132);
-            this.cboTrangThaiDon.Name = "cboTrangThaiDon";
-            this.cboTrangThaiDon.Size = new System.Drawing.Size(96, 21);
-=======
             this.cboTrangThaiDon.Location = new System.Drawing.Point(169, 186);
             this.cboTrangThaiDon.Name = "cboTrangThaiDon";
             this.cboTrangThaiDon.Size = new System.Drawing.Size(236, 21);
->>>>>>> Stashed changes
             this.cboTrangThaiDon.TabIndex = 28;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(196)))), ((int)(((byte)(233)))));
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(100)))));
-<<<<<<< Updated upstream
-            this.label13.Location = new System.Drawing.Point(15, 135);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(83, 13);
-=======
             this.label13.Location = new System.Drawing.Point(14, 186);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(121, 21);
->>>>>>> Stashed changes
+            this.label13.Size = new System.Drawing.Size(106, 19);
             this.label13.TabIndex = 27;
             this.label13.Text = "Trạng thái đơn";
             // 
@@ -202,74 +153,38 @@
             // 
             this.cboNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboNgay.FormattingEnabled = true;
-<<<<<<< Updated upstream
-            this.cboNgay.Items.AddRange(new object[] {
-            "Năm",
-            "Tháng",
-            "Ngày"});
-            this.cboNgay.Location = new System.Drawing.Point(60, 42);
-            this.cboNgay.Name = "cboNgay";
-            this.cboNgay.Size = new System.Drawing.Size(46, 21);
-=======
             this.cboNgay.Location = new System.Drawing.Point(71, 42);
             this.cboNgay.Name = "cboNgay";
             this.cboNgay.Size = new System.Drawing.Size(125, 21);
->>>>>>> Stashed changes
             this.cboNgay.TabIndex = 26;
             // 
             // cboThang
             // 
             this.cboThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboThang.FormattingEnabled = true;
-<<<<<<< Updated upstream
-            this.cboThang.Items.AddRange(new object[] {
-            "Năm",
-            "Tháng",
-            "Ngày"});
-            this.cboThang.Location = new System.Drawing.Point(162, 42);
-            this.cboThang.Name = "cboThang";
-            this.cboThang.Size = new System.Drawing.Size(57, 21);
-=======
             this.cboThang.Location = new System.Drawing.Point(306, 42);
             this.cboThang.Name = "cboThang";
             this.cboThang.Size = new System.Drawing.Size(125, 21);
->>>>>>> Stashed changes
             this.cboThang.TabIndex = 25;
             // 
             // cboNam
             // 
             this.cboNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboNam.FormattingEnabled = true;
-<<<<<<< Updated upstream
-            this.cboNam.Items.AddRange(new object[] {
-            "Năm",
-            "Tháng",
-            "Ngày"});
-            this.cboNam.Location = new System.Drawing.Point(262, 42);
-            this.cboNam.Name = "cboNam";
-            this.cboNam.Size = new System.Drawing.Size(68, 21);
-=======
             this.cboNam.Location = new System.Drawing.Point(535, 42);
             this.cboNam.Name = "cboNam";
             this.cboNam.Size = new System.Drawing.Size(125, 21);
->>>>>>> Stashed changes
             this.cboNam.TabIndex = 24;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(196)))), ((int)(((byte)(233)))));
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(100)))));
-<<<<<<< Updated upstream
-            this.label12.Location = new System.Drawing.Point(225, 45);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(32, 13);
-=======
             this.label12.Location = new System.Drawing.Point(482, 42);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(47, 21);
->>>>>>> Stashed changes
+            this.label12.Size = new System.Drawing.Size(41, 19);
             this.label12.TabIndex = 23;
             this.label12.Text = "Năm";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -278,17 +193,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(196)))), ((int)(((byte)(233)))));
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(100)))));
-<<<<<<< Updated upstream
-            this.label1.Location = new System.Drawing.Point(17, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-=======
             this.label1.Location = new System.Drawing.Point(14, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 21);
->>>>>>> Stashed changes
+            this.label1.Size = new System.Drawing.Size(45, 19);
             this.label1.TabIndex = 21;
             this.label1.Text = "Ngày";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -297,17 +206,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(196)))), ((int)(((byte)(233)))));
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(100)))));
-<<<<<<< Updated upstream
-            this.label2.Location = new System.Drawing.Point(113, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-=======
             this.label2.Location = new System.Drawing.Point(242, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 21);
->>>>>>> Stashed changes
+            this.label2.Size = new System.Drawing.Size(50, 19);
             this.label2.TabIndex = 22;
             this.label2.Text = "Tháng";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -316,25 +219,15 @@
             // 
             this.cboDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDanhMuc.FormattingEnabled = true;
-<<<<<<< Updated upstream
-            this.cboDanhMuc.Location = new System.Drawing.Point(116, 79);
-            this.cboDanhMuc.Name = "cboDanhMuc";
-            this.cboDanhMuc.Size = new System.Drawing.Size(156, 21);
-=======
             this.cboDanhMuc.Location = new System.Drawing.Point(169, 91);
             this.cboDanhMuc.Name = "cboDanhMuc";
             this.cboDanhMuc.Size = new System.Drawing.Size(236, 21);
->>>>>>> Stashed changes
             this.cboDanhMuc.TabIndex = 2;
             // 
             // txtTenSach
             // 
             this.txtTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream
-            this.txtTenSach.Location = new System.Drawing.Point(116, 106);
-=======
             this.txtTenSach.Location = new System.Drawing.Point(169, 144);
->>>>>>> Stashed changes
             this.txtTenSach.Name = "txtTenSach";
             this.txtTenSach.Size = new System.Drawing.Size(237, 20);
             this.txtTenSach.TabIndex = 3;
@@ -343,17 +236,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(196)))), ((int)(((byte)(233)))));
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(100)))));
-<<<<<<< Updated upstream
-            this.label4.Location = new System.Drawing.Point(17, 82);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 13);
-=======
             this.label4.Location = new System.Drawing.Point(14, 91);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 21);
->>>>>>> Stashed changes
+            this.label4.Size = new System.Drawing.Size(75, 19);
             this.label4.TabIndex = 14;
             this.label4.Text = "Danh mục";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -362,107 +249,63 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(196)))), ((int)(((byte)(233)))));
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(100)))));
-<<<<<<< Updated upstream
-            this.label3.Location = new System.Drawing.Point(17, 109);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 13);
-=======
             this.label3.Location = new System.Drawing.Point(14, 141);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 21);
->>>>>>> Stashed changes
+            this.label3.Size = new System.Drawing.Size(65, 19);
             this.label3.TabIndex = 13;
             this.label3.Text = "Tên sách";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // chartTiLeDanhMuc
             // 
-<<<<<<< Updated upstream
             chartArea1.Name = "ChartArea1";
             this.chartTiLeDanhMuc.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartTiLeDanhMuc.Legends.Add(legend1);
-            this.chartTiLeDanhMuc.Location = new System.Drawing.Point(397, 286);
+            this.chartTiLeDanhMuc.Location = new System.Drawing.Point(720, 432);
             this.chartTiLeDanhMuc.Name = "chartTiLeDanhMuc";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartTiLeDanhMuc.Series.Add(series1);
-            this.chartTiLeDanhMuc.Size = new System.Drawing.Size(240, 160);
-=======
-            chartArea7.Name = "ChartArea1";
-            this.chartTiLeDanhMuc.ChartAreas.Add(chartArea7);
-            legend3.Name = "Legend1";
-            this.chartTiLeDanhMuc.Legends.Add(legend3);
-            this.chartTiLeDanhMuc.Location = new System.Drawing.Point(720, 432);
-            this.chartTiLeDanhMuc.Name = "chartTiLeDanhMuc";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.chartTiLeDanhMuc.Series.Add(series7);
             this.chartTiLeDanhMuc.Size = new System.Drawing.Size(337, 151);
->>>>>>> Stashed changes
             this.chartTiLeDanhMuc.TabIndex = 29;
             this.chartTiLeDanhMuc.Text = "chart3";
             // 
             // chartSachBan
             // 
-<<<<<<< Updated upstream
             chartArea2.Name = "ChartArea1";
             this.chartSachBan.ChartAreas.Add(chartArea2);
-            this.chartSachBan.Location = new System.Drawing.Point(397, 145);
-            this.chartSachBan.Name = "chartSachBan";
-            series2.ChartArea = "ChartArea1";
-            series2.Name = "Series1";
-            this.chartSachBan.Series.Add(series2);
-            this.chartSachBan.Size = new System.Drawing.Size(240, 120);
-=======
-            chartArea8.Name = "ChartArea1";
-            this.chartSachBan.ChartAreas.Add(chartArea8);
             this.chartSachBan.Location = new System.Drawing.Point(720, 216);
             this.chartSachBan.Name = "chartSachBan";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series8.Name = "Series1";
-            series8.XValueMember = "Tên sách";
-            series8.YValueMembers = "Số lượng";
-            this.chartSachBan.Series.Add(series8);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series2.Name = "Series1";
+            series2.XValueMember = "Tên sách";
+            series2.YValueMembers = "Số lượng";
+            this.chartSachBan.Series.Add(series2);
             this.chartSachBan.Size = new System.Drawing.Size(337, 153);
->>>>>>> Stashed changes
             this.chartSachBan.TabIndex = 28;
             this.chartSachBan.Text = "chart2";
             // 
             // chartDoanhThu
             // 
-<<<<<<< Updated upstream
             chartArea3.Name = "ChartArea1";
             this.chartDoanhThu.ChartAreas.Add(chartArea3);
-            this.chartDoanhThu.Location = new System.Drawing.Point(397, 12);
+            this.chartDoanhThu.Location = new System.Drawing.Point(720, 12);
             this.chartDoanhThu.Name = "chartDoanhThu";
+            series3.BorderWidth = 2;
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
             series3.Name = "Series1";
+            series3.XValueMember = "ThoiGian";
+            series3.YValueMembers = "DoanhThu";
             this.chartDoanhThu.Series.Add(series3);
-            this.chartDoanhThu.Size = new System.Drawing.Size(240, 114);
-=======
-            chartArea9.Name = "ChartArea1";
-            this.chartDoanhThu.ChartAreas.Add(chartArea9);
-            this.chartDoanhThu.Location = new System.Drawing.Point(735, -1);
-            this.chartDoanhThu.Name = "chartDoanhThu";
-            series9.BorderWidth = 2;
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series9.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series9.Name = "Series1";
-            series9.XValueMember = "ThoiGian";
-            series9.YValueMembers = "DoanhThu";
-            this.chartDoanhThu.Series.Add(series9);
             this.chartDoanhThu.Size = new System.Drawing.Size(337, 154);
->>>>>>> Stashed changes
             this.chartDoanhThu.TabIndex = 27;
             this.chartDoanhThu.Text = "chart1";
             // 
@@ -470,17 +313,11 @@
             // 
             this.dgvBanHang.AllowUserToAddRows = false;
             this.dgvBanHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-<<<<<<< Updated upstream
-            this.dgvBanHang.Location = new System.Drawing.Point(12, 241);
-            this.dgvBanHang.Name = "dgvBanHang";
-            this.dgvBanHang.Size = new System.Drawing.Size(252, 205);
-=======
             this.dgvBanHang.Location = new System.Drawing.Point(12, 357);
             this.dgvBanHang.Name = "dgvBanHang";
             this.dgvBanHang.RowHeadersVisible = false;
             this.dgvBanHang.RowHeadersWidth = 62;
             this.dgvBanHang.Size = new System.Drawing.Size(394, 266);
->>>>>>> Stashed changes
             this.dgvBanHang.TabIndex = 26;
             // 
             // label6
@@ -489,15 +326,9 @@
             this.label6.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-<<<<<<< Updated upstream
-            this.label6.Location = new System.Drawing.Point(470, 129);
+            this.label6.Location = new System.Drawing.Point(853, 169);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 13);
-=======
-            this.label6.Location = new System.Drawing.Point(829, 169);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(141, 21);
->>>>>>> Stashed changes
             this.label6.TabIndex = 35;
             this.label6.Text = "Biểu đồ doanh thu ";
             // 
@@ -507,15 +338,9 @@
             this.label7.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-<<<<<<< Updated upstream
-            this.label7.Location = new System.Drawing.Point(470, 270);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 13);
-=======
             this.label7.Location = new System.Drawing.Point(838, 372);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(204, 21);
->>>>>>> Stashed changes
+            this.label7.Size = new System.Drawing.Size(152, 13);
             this.label7.TabIndex = 36;
             this.label7.Text = "Biểu đồ Top 5 sách bán chạy";
             // 
@@ -525,118 +350,61 @@
             this.label11.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
-<<<<<<< Updated upstream
-            this.label11.Location = new System.Drawing.Point(454, 449);
+            this.label11.Location = new System.Drawing.Point(826, 586);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(145, 13);
             this.label11.TabIndex = 37;
             this.label11.Text = "Cơ cấu danh mục sách bán";
             // 
-=======
-            this.label11.Location = new System.Drawing.Point(815, 586);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(196, 21);
-            this.label11.TabIndex = 37;
-            this.label11.Text = "Cơ cấu danh mục sách bán";
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.White;
-            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(100)))));
-            this.btnTimKiem.Location = new System.Drawing.Point(12, 263);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(124, 35);
-            this.btnTimKiem.TabIndex = 39;
-            this.btnTimKiem.Text = "🔍 Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = false;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
-            // 
->>>>>>> Stashed changes
             // btnLamMoi
             // 
             this.btnLamMoi.BackColor = System.Drawing.Color.White;
             this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnLamMoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(100)))));
-<<<<<<< Updated upstream
-            this.btnLamMoi.Location = new System.Drawing.Point(93, 188);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(75, 35);
-            this.btnLamMoi.TabIndex = 25;
-            this.btnLamMoi.Text = "Làm mới";
-=======
             this.btnLamMoi.Location = new System.Drawing.Point(287, 263);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(119, 35);
             this.btnLamMoi.TabIndex = 40;
             this.btnLamMoi.Text = "🔄 Làm mới";
->>>>>>> Stashed changes
             this.btnLamMoi.UseVisualStyleBackColor = false;
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.White;
-            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(100)))));
-            this.btnTimKiem.Location = new System.Drawing.Point(12, 188);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(75, 35);
-            this.btnTimKiem.TabIndex = 24;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = false;
             // 
             // btnInBaoCao
             // 
             this.btnInBaoCao.BackColor = System.Drawing.Color.White;
             this.btnInBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInBaoCao.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInBaoCao.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnInBaoCao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(100)))));
-<<<<<<< Updated upstream
-            this.btnInBaoCao.Location = new System.Drawing.Point(174, 188);
-            this.btnInBaoCao.Name = "btnInBaoCao";
-            this.btnInBaoCao.Size = new System.Drawing.Size(97, 35);
-            this.btnInBaoCao.TabIndex = 30;
-            this.btnInBaoCao.Text = "In báo cáo\r\n";
-=======
             this.btnInBaoCao.Location = new System.Drawing.Point(548, 263);
             this.btnInBaoCao.Name = "btnInBaoCao";
             this.btnInBaoCao.Size = new System.Drawing.Size(130, 35);
             this.btnInBaoCao.TabIndex = 45;
             this.btnInBaoCao.Text = "🧾  In báo cáo\r\n";
->>>>>>> Stashed changes
             this.btnInBaoCao.UseVisualStyleBackColor = false;
             this.btnInBaoCao.Click += new System.EventHandler(this.btnInBaoCao_Click);
             // 
-            // btnTroLai
+            // btnTimKiem
             // 
-            this.btnTroLai.BackColor = System.Drawing.Color.White;
-            this.btnTroLai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTroLai.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTroLai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(100)))));
-            this.btnTroLai.Location = new System.Drawing.Point(282, 188);
-            this.btnTroLai.Name = "btnTroLai";
-            this.btnTroLai.Size = new System.Drawing.Size(83, 35);
-            this.btnTroLai.TabIndex = 38;
-            this.btnTroLai.Text = "Trở lại";
-            this.btnTroLai.UseVisualStyleBackColor = false;
+            this.btnTimKiem.BackColor = System.Drawing.Color.White;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(100)))));
+            this.btnTimKiem.Location = new System.Drawing.Point(12, 263);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(124, 35);
+            this.btnTimKiem.TabIndex = 46;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = false;
             // 
             // frmBCBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-<<<<<<< Updated upstream
-            this.ClientSize = new System.Drawing.Size(657, 461);
-            this.Controls.Add(this.btnTroLai);
-            this.Controls.Add(this.btnTimKiem);
-=======
             this.ClientSize = new System.Drawing.Size(1095, 637);
+            this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.chartTiLeDanhMuc);
->>>>>>> Stashed changes
             this.Controls.Add(this.btnInBaoCao);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.label11);
@@ -682,9 +450,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnLamMoi;
-        private System.Windows.Forms.Button btnTimKiem;
+       
         private System.Windows.Forms.Button btnInBaoCao;
-        private System.Windows.Forms.Button btnTroLai;
         private System.Windows.Forms.ComboBox cboNgay;
         private System.Windows.Forms.ComboBox cboThang;
         private System.Windows.Forms.ComboBox cboNam;
@@ -693,5 +460,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboTrangThaiDon;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnTimKiem;
     }
 }

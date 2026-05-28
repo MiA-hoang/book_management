@@ -1,3 +1,9 @@
 <Solution>
-  <Project Path="QuanLyCuaHangSach/QuanLyCuaHangSach.csproj" Id="9d2b5bee-4b9a-4464-9be1-a11a9b036a08" />
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="QuanLyCuaHangSach/QuanLyCuaHangSach.csproj" Id="9d2b5bee-4b9a-4464-9be1-a11a9b036a08">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
 </Solution>

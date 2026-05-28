@@ -17,3 +17,17 @@ C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\x64\De
 C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\x64\Debug\QuanLyCu.C3400158.Up2Date
 C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\x64\Debug\QuanLyCuaHangSach.exe
 C:\Users\Administrator\source\repos\book_management\QuanLyCuaHangSach\obj\x64\Debug\QuanLyCuaHangSach.pdb
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\x64\Debug\QuanLyCuaHangSach.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\x64\Debug\QuanLyCuaHangSach.Admin.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\x64\Debug\QuanLyCuaHangSach.fChangePassWord.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\x64\Debug\QuanLyCuaHangSach.fLogin.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\x64\Debug\QuanLyCuaHangSach.fNhanVien.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\x64\Debug\QuanLyCuaHangSach.frmBCBanHang.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\x64\Debug\QuanLyCuaHangSach.frmBCNhap.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\x64\Debug\QuanLyCuaHangSach.NVBanSach.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\x64\Debug\QuanLyCuaHangSach.nvKho.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\x64\Debug\QuanLyCuaHangSach.Properties.Resources.resources
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\x64\Debug\QuanLyCuaHangSach.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\x64\Debug\QuanLyCuaHangSach.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\x64\Debug\QuanLyCuaHangSach.exe
+C:\Users\Administrator\source\repos\book_management_new\QuanLyCuaHangSach\obj\x64\Debug\QuanLyCuaHangSach.pdb

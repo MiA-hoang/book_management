@@ -50,17 +50,18 @@ namespace QuanLyCuaHangSach
             }
         }
 
-<<<<<<< Updated upstream
-=======
+        private void fLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
         private void btnExit_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void fLogin_Load(object sender, EventArgs e)
-        {
 
-        }
->>>>>>> Stashed changes
+
     }
 }
