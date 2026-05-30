@@ -23,12 +23,14 @@ namespace QuanLyCuaHangSach
         {
             DAO.Connect();
 
-            string sql = "SELECT * FROM KHACH_HANG";
+            string sql = "SELECT * FROM tblKhachHang";
 
             dgvKhachHang.DataSource =
                 DAO.LoadDataToTable(sql);
 
             DAO.Close();
+            if (dgvKhachHang.DataSource is DataTable dt)
+                dt.DefaultView.RowFilter = "";
         }
         private string TaoMaKhachHang()
         {
@@ -38,7 +40,7 @@ namespace QuanLyCuaHangSach
 
             string sql =
                 @"SELECT TOP 1 ma_khach_hang
-                  FROM KHACH_HANG
+                  FROM tblKhachHang
                   ORDER BY ma_khach_hang DESC";
 
             string maCuoi = DAO.getFieldValue(sql);
@@ -126,7 +128,7 @@ namespace QuanLyCuaHangSach
         {
             DAO.Connect();
 
-            string sql = @"INSERT INTO KHACH_HANG
+            string sql = @"INSERT INTO tblKhachHang
                    VALUES
                    (@makh, @tenkh, @sdt, @diachi)";
 
@@ -151,7 +153,7 @@ namespace QuanLyCuaHangSach
         {
             DAO.Connect();
 
-            string sql = @"UPDATE KHACH_HANG
+            string sql = @"UPDATE tblKhachHang
                    SET ten_khach_hang = @tenkh,
                        so_dien_thoai = @sdt,
                        dia_chi = @diachi
@@ -186,7 +188,7 @@ namespace QuanLyCuaHangSach
             {
                 DAO.Connect();
 
-                string sql = @"DELETE FROM KHACH_HANG
+                string sql = @"DELETE FROM tblKhachHang
                        WHERE ma_khach_hang = @makh";
 
                 SqlCommand cmd =
@@ -222,7 +224,7 @@ namespace QuanLyCuaHangSach
 
             string sql = @"
         SELECT *
-        FROM KHACH_HANG
+        FROM tblKhachHang
         WHERE ma_khach_hang LIKE N'%" + tukhoa + @"%'
         OR ten_khach_hang LIKE N'%" + tukhoa + @"%'
         OR so_dien_thoai LIKE N'%" + tukhoa + @"%'";

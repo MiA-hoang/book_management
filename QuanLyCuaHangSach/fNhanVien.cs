@@ -22,7 +22,7 @@ namespace QuanLyCuaHangSach
         {
             DAO.Connect();
 
-            string sql = "SELECT * FROM NHAN_VIEN";
+            string sql = "SELECT * FROM tblNhanVien";
 
             dgvNhanVien.DataSource =
                 DAO.LoadDataToTable(sql);
@@ -53,7 +53,7 @@ namespace QuanLyCuaHangSach
 
             DAO.Connect();
             string sql = @"SELECT TOP 1 ma_nhan_vien
-                           FROM NHAN_VIEN
+                           FROM tblNhanVien
                            ORDER BY ma_nhan_vien DESC";
             string maCuoi = DAO.getFieldValue(sql);
             DAO.Close();
@@ -110,20 +110,20 @@ namespace QuanLyCuaHangSach
 
            
             // ===== MÀU NÚT =====
-            btnThem.FillColor =
-                Color.FromArgb(99, 102, 241);
+            //btnThem.FillColor =
+            //    Color.FromArgb(99, 102, 241);
 
-            btnSua.FillColor =
-                Color.FromArgb(37, 99, 235);
+            //btnSua.FillColor =
+            //    Color.FromArgb(37, 99, 235);
 
-            btnXoa.FillColor =
-                Color.FromArgb(239, 68, 68);
+            //btnXoa.FillColor =
+            //    Color.FromArgb(239, 68, 68);
 
-            btnLamMoi.FillColor =
-                Color.FromArgb(249, 115, 22);
+            //btnLamMoi.FillColor =
+            //    Color.FromArgb(249, 115, 22);
 
-            btnLuu.FillColor =
-                Color.FromArgb(34, 197, 94);
+            //btnLuu.FillColor =
+            //    Color.FromArgb(34, 197, 94);
 
             // ===== SEARCH =====
             txtTimKiem.PlaceholderText =
@@ -207,7 +207,7 @@ namespace QuanLyCuaHangSach
 
             DAO.Connect();
 
-            string sql = @"INSERT INTO NHAN_VIEN
+            string sql = @"INSERT INTO tblNhanVien
                            VALUES
                            (@manv,@tk,@mk,@hoten,@vaitro,@trangthai)";
 
@@ -254,7 +254,7 @@ namespace QuanLyCuaHangSach
 
             DAO.Connect();
 
-            string sql = @"UPDATE NHAN_VIEN
+            string sql = @"UPDATE tblNhanVien
                            SET ten_dang_nhap = @tk,
                                mat_khau = @mk,
                                ho_ten = @hoten,
@@ -313,7 +313,7 @@ namespace QuanLyCuaHangSach
                 DAO.Connect();
 
                 string sql =
-                    @"DELETE FROM NHAN_VIEN
+                    @"DELETE FROM tblNhanVien
                       WHERE ma_nhan_vien = @manv";
 
                 SqlCommand cmd =
@@ -342,7 +342,7 @@ namespace QuanLyCuaHangSach
             DAO.Connect();
 
             string sql = @"SELECT *
-                           FROM NHAN_VIEN
+                           FROM tblNhanVien
                            WHERE ma_nhan_vien
                            LIKE N'%" + tukhoa + @"%'
 

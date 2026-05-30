@@ -12,9 +12,19 @@ namespace QuanLyCuaHangSach
 {
     public partial class fChangePassWord : Form
     {
+        private string _maNhanVien;
+        private string _hoTen;
+        private string _vaiTro;
         public fChangePassWord()
         {
             InitializeComponent();
+        }
+        public fChangePassWord(string maNhanVien, string hoTen, string vaiTro)
+        {
+            InitializeComponent();
+            _maNhanVien = maNhanVien;
+            _hoTen = hoTen;
+            _vaiTro = vaiTro;
         }
 
 
@@ -28,8 +38,15 @@ namespace QuanLyCuaHangSach
             else
             {
                 txtCurrent.UseSystemPasswordChar = true;
-                txtCurrent.UseSystemPasswordChar = true;
+                txtNew.UseSystemPasswordChar = true;
             }
+        }
+
+        private void fChangePassWord_Load(object sender, EventArgs e)
+        {
+            label3.Text = _hoTen.ToUpper();
+            label6.Text = _vaiTro;
+            label4.Text = _hoTen.Substring(0, 1).ToUpper();
         }
     }
 }

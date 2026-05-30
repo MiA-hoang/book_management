@@ -20,15 +20,22 @@ namespace QuanLyCuaHangSach
 
         public static void Connect()
         {
-            con.ConnectionString = ConnectionString;
             try
             {
-                if (con != null && con.State == ConnectionState.Closed)
+                if (con == null)
+                {
+                    con = new SqlConnection(ConnectionString);
+                }
+
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.ConnectionString = ConnectionString;
                     con.Open();
+                }
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw;
             }
         }
         public static void Close()
