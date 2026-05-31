@@ -70,6 +70,7 @@
             this.btnExit.Size = new System.Drawing.Size(180, 45);
             this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Thoát";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
             // 
             // btnLogin
             // 

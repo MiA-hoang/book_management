@@ -28,15 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< Updated upstream
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-=======
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
->>>>>>> Stashed changes
+
             this.grbHoaDon = new Guna.UI2.WinForms.Guna2GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtNgayNhap = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -97,11 +92,8 @@
             this.grbHoaDon.ForeColor = System.Drawing.Color.Black;
             this.grbHoaDon.Location = new System.Drawing.Point(12, 5);
             this.grbHoaDon.Name = "grbHoaDon";
-<<<<<<< Updated upstream
-            this.grbHoaDon.Size = new System.Drawing.Size(854, 110);
-=======
             this.grbHoaDon.Size = new System.Drawing.Size(1403, 110);
->>>>>>> Stashed changes
+
             this.grbHoaDon.TabIndex = 0;
             this.grbHoaDon.Text = "THÔNG TIN HÓA ĐƠN NHẬP";
             // 
@@ -123,11 +115,8 @@
             this.dtNgayNhap.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtNgayNhap.ForeColor = System.Drawing.Color.Black;
             this.dtNgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-<<<<<<< Updated upstream
-            this.dtNgayNhap.Location = new System.Drawing.Point(398, 55);
-=======
             this.dtNgayNhap.Location = new System.Drawing.Point(460, 55);
->>>>>>> Stashed changes
+
             this.dtNgayNhap.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtNgayNhap.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtNgayNhap.Name = "dtNgayNhap";
@@ -144,25 +133,17 @@
             this.cboNCC.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cboNCC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboNCC.ItemHeight = 30;
-<<<<<<< Updated upstream
-            this.cboNCC.Location = new System.Drawing.Point(670, 55);
-            this.cboNCC.Name = "cboNCC";
-            this.cboNCC.Size = new System.Drawing.Size(170, 36);
-=======
             this.cboNCC.Location = new System.Drawing.Point(713, 55);
             this.cboNCC.Name = "cboNCC";
             this.cboNCC.Size = new System.Drawing.Size(304, 36);
->>>>>>> Stashed changes
+
             this.cboNCC.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-<<<<<<< Updated upstream
-            this.label4.Location = new System.Drawing.Point(560, 62);
-=======
             this.label4.Location = new System.Drawing.Point(634, 60);
->>>>>>> Stashed changes
+
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 23);
             this.label4.TabIndex = 0;
@@ -171,11 +152,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-<<<<<<< Updated upstream
-            this.label3.Location = new System.Drawing.Point(290, 62);
-=======
             this.label3.Location = new System.Drawing.Point(357, 63);
->>>>>>> Stashed changes
+
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 23);
             this.label3.TabIndex = 0;
@@ -200,11 +178,8 @@
             this.txtMaHDN.Name = "txtMaHDN";
             this.txtMaHDN.PlaceholderText = "";
             this.txtMaHDN.SelectedText = "";
-<<<<<<< Updated upstream
-            this.txtMaHDN.Size = new System.Drawing.Size(180, 36);
-=======
             this.txtMaHDN.Size = new System.Drawing.Size(248, 36);
->>>>>>> Stashed changes
+
             this.txtMaHDN.TabIndex = 0;
             // 
             // txtNhanVien
@@ -274,11 +249,8 @@
             this.grbChiTiet.ForeColor = System.Drawing.Color.Black;
             this.grbChiTiet.Location = new System.Drawing.Point(12, 120);
             this.grbChiTiet.Name = "grbChiTiet";
-<<<<<<< Updated upstream
-            this.grbChiTiet.Size = new System.Drawing.Size(854, 110);
-=======
             this.grbChiTiet.Size = new System.Drawing.Size(1403, 125);
->>>>>>> Stashed changes
+
             this.grbChiTiet.TabIndex = 1;
             this.grbChiTiet.Text = "THÊM SÁCH VÀO HÓA ĐƠN";
             // 
@@ -286,15 +258,10 @@
             // 
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnThem.ForeColor = System.Drawing.Color.White;
-<<<<<<< Updated upstream
-            this.btnThem.Location = new System.Drawing.Point(740, 55);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(100, 36);
-=======
             this.btnThem.Location = new System.Drawing.Point(1241, 58);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(136, 40);
->>>>>>> Stashed changes
+
             this.btnThem.TabIndex = 3;
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -304,36 +271,18 @@
             this.txtDonGiaNhap.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDonGiaNhap.DefaultText = "";
             this.txtDonGiaNhap.Font = new System.Drawing.Font("Segoe UI", 9F);
-<<<<<<< Updated upstream
-            this.txtDonGiaNhap.Location = new System.Drawing.Point(610, 55);
-=======
             this.txtDonGiaNhap.Location = new System.Drawing.Point(951, 62);
->>>>>>> Stashed changes
+
             this.txtDonGiaNhap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDonGiaNhap.Name = "txtDonGiaNhap";
             this.txtDonGiaNhap.PlaceholderText = "";
             this.txtDonGiaNhap.SelectedText = "";
-<<<<<<< Updated upstream
-            this.txtDonGiaNhap.Size = new System.Drawing.Size(120, 36);
-=======
             this.txtDonGiaNhap.Size = new System.Drawing.Size(182, 36);
->>>>>>> Stashed changes
+
             this.txtDonGiaNhap.TabIndex = 2;
             // 
             // nudSoLuong
             // 
-<<<<<<< Updated upstream
-            this.txtSoLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSoLuong.DefaultText = "";
-            this.txtSoLuong.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSoLuong.Location = new System.Drawing.Point(440, 55);
-            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.PlaceholderText = "";
-            this.txtSoLuong.SelectedText = "";
-            this.txtSoLuong.Size = new System.Drawing.Size(80, 36);
-            this.txtSoLuong.TabIndex = 1;
-=======
             this.nudSoLuong.BackColor = System.Drawing.Color.Transparent;
             this.nudSoLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nudSoLuong.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -342,7 +291,7 @@
             this.nudSoLuong.Name = "nudSoLuong";
             this.nudSoLuong.Size = new System.Drawing.Size(182, 36);
             this.nudSoLuong.TabIndex = 1;
->>>>>>> Stashed changes
+
             // 
             // cboSach
             // 
@@ -353,11 +302,8 @@
             this.cboSach.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cboSach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboSach.ItemHeight = 30;
-<<<<<<< Updated upstream
-            this.cboSach.Location = new System.Drawing.Point(87, 55);
-=======
             this.cboSach.Location = new System.Drawing.Point(69, 62);
->>>>>>> Stashed changes
+
             this.cboSach.Name = "cboSach";
             this.cboSach.Size = new System.Drawing.Size(250, 36);
             this.cboSach.TabIndex = 0;
@@ -365,11 +311,8 @@
             // label8
             // 
             this.label8.AutoSize = true;
-<<<<<<< Updated upstream
-            this.label8.Location = new System.Drawing.Point(526, 62);
-=======
             this.label8.Location = new System.Drawing.Point(859, 69);
->>>>>>> Stashed changes
+
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(86, 23);
             this.label8.TabIndex = 0;
@@ -378,11 +321,8 @@
             // label7
             // 
             this.label7.AutoSize = true;
-<<<<<<< Updated upstream
-            this.label7.Location = new System.Drawing.Point(348, 62);
-=======
             this.label7.Location = new System.Drawing.Point(460, 68);
->>>>>>> Stashed changes
+
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 23);
             this.label7.TabIndex = 0;
@@ -391,11 +331,8 @@
             // label6
             // 
             this.label6.AutoSize = true;
-<<<<<<< Updated upstream
-            this.label6.Location = new System.Drawing.Point(10, 62);
-=======
             this.label6.Location = new System.Drawing.Point(10, 69);
->>>>>>> Stashed changes
+
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 23);
             this.label6.TabIndex = 0;
@@ -424,20 +361,6 @@
             // dgvChiTiet
             // 
             this.dgvChiTiet.AllowUserToAddRows = false;
-<<<<<<< Updated upstream
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvChiTiet.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvChiTiet.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dgvChiTiet.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvChiTiet.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-=======
             dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
             this.dgvChiTiet.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.dgvChiTiet.BackgroundColor = System.Drawing.SystemColors.Window;
@@ -450,7 +373,7 @@
             dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvChiTiet.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
->>>>>>> Stashed changes
+
             this.dgvChiTiet.ColumnHeadersHeight = 35;
             this.dgvChiTiet.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaSach,
@@ -458,22 +381,6 @@
             this.colSoLuong,
             this.colDonGia,
             this.colThanhTien});
-<<<<<<< Updated upstream
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvChiTiet.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvChiTiet.GridColor = System.Drawing.Color.White;
-            this.dgvChiTiet.Location = new System.Drawing.Point(12, 275);
-            this.dgvChiTiet.Name = "dgvChiTiet";
-            this.dgvChiTiet.RowHeadersVisible = false;
-            this.dgvChiTiet.RowHeadersWidth = 51;
-            this.dgvChiTiet.Size = new System.Drawing.Size(854, 210);
-=======
             dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -488,7 +395,7 @@
             this.dgvChiTiet.RowHeadersVisible = false;
             this.dgvChiTiet.RowHeadersWidth = 51;
             this.dgvChiTiet.Size = new System.Drawing.Size(1403, 438);
->>>>>>> Stashed changes
+
             this.dgvChiTiet.TabIndex = 8;
             this.dgvChiTiet.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvChiTiet.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -552,11 +459,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-<<<<<<< Updated upstream
-            this.label1.Location = new System.Drawing.Point(540, 500);
-=======
             this.label1.Location = new System.Drawing.Point(941, 763);
->>>>>>> Stashed changes
+
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 28);
             this.label1.TabIndex = 0;
@@ -567,21 +471,15 @@
             this.txtTongTien.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTongTien.DefaultText = "";
             this.txtTongTien.Font = new System.Drawing.Font("Segoe UI", 9F);
-<<<<<<< Updated upstream
-            this.txtTongTien.Location = new System.Drawing.Point(654, 495);
-=======
             this.txtTongTien.Location = new System.Drawing.Point(1071, 753);
->>>>>>> Stashed changes
+
             this.txtTongTien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.PlaceholderText = "";
             this.txtTongTien.ReadOnly = true;
             this.txtTongTien.SelectedText = "";
-<<<<<<< Updated upstream
-            this.txtTongTien.Size = new System.Drawing.Size(200, 36);
-=======
             this.txtTongTien.Size = new System.Drawing.Size(227, 36);
->>>>>>> Stashed changes
+
             this.txtTongTien.TabIndex = 4;
             // 
             // lblTongDauSach
@@ -602,15 +500,10 @@
             // 
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-<<<<<<< Updated upstream
-            this.btnXoa.Location = new System.Drawing.Point(12, 495);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(120, 40);
-=======
             this.btnXoa.Location = new System.Drawing.Point(11, 753);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(136, 40);
->>>>>>> Stashed changes
+
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa dòng";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -619,15 +512,9 @@
             // 
             this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLuu.ForeColor = System.Drawing.Color.White;
-<<<<<<< Updated upstream
-            this.btnLuu.Location = new System.Drawing.Point(138, 495);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(120, 40);
-=======
             this.btnLuu.Location = new System.Drawing.Point(225, 753);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(136, 40);
->>>>>>> Stashed changes
             this.btnLuu.TabIndex = 5;
             this.btnLuu.Text = "Lưu HĐ";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
@@ -636,15 +523,9 @@
             // 
             this.btnIn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnIn.ForeColor = System.Drawing.Color.White;
-<<<<<<< Updated upstream
-            this.btnIn.Location = new System.Drawing.Point(264, 495);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(120, 40);
-=======
             this.btnIn.Location = new System.Drawing.Point(436, 753);
             this.btnIn.Name = "btnIn";
             this.btnIn.Size = new System.Drawing.Size(136, 40);
->>>>>>> Stashed changes
             this.btnIn.TabIndex = 6;
             this.btnIn.Text = "In HĐ";
             // 
@@ -652,11 +533,7 @@
             // 
             this.btnTaoMoi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnTaoMoi.ForeColor = System.Drawing.Color.White;
-<<<<<<< Updated upstream
-            this.btnTaoMoi.Location = new System.Drawing.Point(12, 235);
-=======
             this.btnTaoMoi.Location = new System.Drawing.Point(12, 251);
->>>>>>> Stashed changes
             this.btnTaoMoi.Name = "btnTaoMoi";
             this.btnTaoMoi.Size = new System.Drawing.Size(120, 35);
             this.btnTaoMoi.TabIndex = 7;
@@ -667,31 +544,18 @@
             // 
             this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnThoat.ForeColor = System.Drawing.Color.White;
-<<<<<<< Updated upstream
-            this.btnThoat.Location = new System.Drawing.Point(390, 495);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(120, 40);
-            this.btnThoat.TabIndex = 9;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-=======
             this.btnThoat.Location = new System.Drawing.Point(0, 0);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(180, 45);
             this.btnThoat.TabIndex = 0;
->>>>>>> Stashed changes
             // 
             // frmHoaDonNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-<<<<<<< Updated upstream
-            this.ClientSize = new System.Drawing.Size(878, 544);
-            this.Controls.Add(this.btnThoat);
-=======
             this.ClientSize = new System.Drawing.Size(1417, 803);
->>>>>>> Stashed changes
+
             this.Controls.Add(this.dgvChiTiet);
             this.Controls.Add(this.btnTaoMoi);
             this.Controls.Add(this.btnIn);

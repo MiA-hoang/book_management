@@ -12,12 +12,22 @@ namespace QuanLyCuaHangSach
 {
     public partial class Admin : Form
     {
+        private string _maNhanVien;
+        private string _hoTen;
+        private string _vaiTro;
+
+        public Admin(string maNhanVien, string hoTen, string vaiTro)
+        {
+            _maNhanVien = maNhanVien;
+            _hoTen = hoTen ?? string.Empty;
+            _vaiTro = vaiTro ?? string.Empty;
+            InitializeComponent();
+        }
+
         public Admin()
         {
             InitializeComponent();
         }
-<<<<<<< Updated upstream
-=======
         private void Admin_Load(object sender, EventArgs e)
         {
             label2.Text = _hoTen.ToUpper();
@@ -34,16 +44,14 @@ namespace QuanLyCuaHangSach
         }
 
 
->>>>>>> Stashed changes
         private void guna2Button1_Click(object sender, EventArgs e)
         {
 
-            fChangePassWord change= new fChangePassWord();
+            fChangePassWord change = new fChangePassWord();
             this.Hide();
             change.ShowDialog();
-<<<<<<< Updated upstream
             this.Show();
-=======
+
         }
 
         private void LoadFormToPanel(Form childForm)
@@ -70,7 +78,6 @@ namespace QuanLyCuaHangSach
         {
             TTTaiKhoan frm = new TTTaiKhoan(_maNhanVien);
             frm.ShowDialog();
->>>>>>> Stashed changes
         }
     }
 }

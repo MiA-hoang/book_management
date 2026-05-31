@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,26 +12,62 @@ namespace QuanLyCuaHangSach
 {
     public partial class nvKho : Form
     {
-        public nvKho()
+        private string _maNhanVien;
+        private string _hoTen;
+        private string _vaiTro;
+
+        public nvKho(string maNhanVien, string hoTen, string vaiTro)
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
+            this.StartPosition = FormStartPosition.CenterScreen;
+
+            _maNhanVien = maNhanVien;
+            _hoTen = hoTen;
+            _vaiTro = vaiTro;
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void nvKho_Load(object sender, EventArgs e)
         {
-            fChangePassWord change = new fChangePassWord();
-            this.Hide();
+            lbTen.Text = _hoTen.ToUpper();
+            lbVtro.Text = _vaiTro;
+
+            timer1.Interval = 1000;
+            timer1.Tick += (s, ev) =>
+            {
+                lbTG1.Text = DateTime.Now.ToString("HH:mm:ss - dddd, dd/MM/yyyy",
+                    new System.Globalization.CultureInfo("vi-VN"));
+            };
+            timer1.Start();
+            lbTG1.Text = DateTime.Now.ToString("HH:mm:ss - dddd, dd/MM/yyyy",
+                new System.Globalization.CultureInfo("vi-VN"));
+        }
+        private void LoadFormToPanel(Form childForm)
+        {
+            pContent3.Controls.Clear();
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pContent3.Controls.Add(childForm);
+            childForm.Show();
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            fChangePassWord change = new fChangePassWord(_maNhanVien, _hoTen, _vaiTro);
             change.ShowDialog();
-<<<<<<< Updated upstream
-            this.Show();
-=======
         }
 
         private void guna2Button8_Click(object sender, EventArgs e)
         {
             try
             {
-                LoadFormToPanel(new frmHoaDonNhap(_maNhanVien, _hoTen));
+                LoadFormToPanel(new frmHoaDonNhap());
             }
             catch (Exception ex)
             {
@@ -42,35 +78,22 @@ namespace QuanLyCuaHangSach
         private void guna2Button7_Click(object sender, EventArgs e)
         {
             LoadFormToPanel(new frmNhaCungCap());
->>>>>>> Stashed changes
         }
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-            // Mở trang Hóa đơn nhập
-            frmHoaDonNhap f = new frmHoaDonNhap();
-            f.ShowDialog();
+            LoadFormToPanel(new frmBCNhap());
         }
 
-        private void guna2Button5_Click(object sender, EventArgs e)
+        private void guna2Button15_Click(object sender, EventArgs e)
         {
-            // Mở trang Tồn kho (Tra cứu sách)
-            fSanPham f = new fSanPham();
-            f.ShowDialog();
-        }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-            // Mở trang Nhà cung cấp
-            frmNhaCungCap f = new frmNhaCungCap();
-            f.ShowDialog();
+            LoadFormToPanel(new fSanPham());
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            // Mở trang Tra cứu sách
-            fSanPham f = new fSanPham();
-            f.ShowDialog();
+            TTTaiKhoan frm = new TTTaiKhoan(_maNhanVien);
+            frm.ShowDialog();
         }
     }
 }

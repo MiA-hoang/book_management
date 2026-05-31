@@ -12,13 +12,21 @@ namespace QuanLyCuaHangSach
 {
     public partial class NVBanSach : Form
     {
-        public NVBanSach()
+        private string _maNhanVien;
+        private string _hoTen;
+        private string _vaiTro;
+
+        public NVBanSach(string maNhanVien, string hoTen, string vaiTro)
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
+            this.StartPosition = FormStartPosition.CenterScreen;
+
+            _maNhanVien = maNhanVien;
+            _hoTen = hoTen;
+            _vaiTro = vaiTro;
         }
 
-<<<<<<< Updated upstream
-=======
         private void NVBanSach_Load(object sender, EventArgs e)
         {
             lbTen.Text = _hoTen.ToUpper();
@@ -34,7 +42,7 @@ namespace QuanLyCuaHangSach
             lbTG1.Text = DateTime.Now.ToString("HH:mm:ss - dddd, dd/MM/yyyy",
                 new System.Globalization.CultureInfo("vi-VN"));
         }
-
+        
 
         private void LoadFormToPanel(Form childForm)
         {
@@ -45,42 +53,24 @@ namespace QuanLyCuaHangSach
             pContent.Controls.Add(childForm);
             childForm.Show();
         }
+       
 
+        private void btnTraCuuSach_Click_1(object sender, EventArgs e){ LoadFormToPanel(new fSanPham());}
+        private void btnLapHoaDonBan_Click_1(object sender, EventArgs e) { LoadFormToPanel(new frmHoaDonXuat()); }
+        private void btnKhachHang_Click_1(object sender, EventArgs e) { LoadFormToPanel(new frmKhachHang());}
+        private void btnDSHoaDonBan_Click(object sender, EventArgs e){ LoadFormToPanel(new frmBCBanHang());}
+        private void btnLogOut_Click(object sender, EventArgs e){ this.Close();}
 
-        private void btnTraCuuSach_Click_1(object sender, EventArgs e) { LoadFormToPanel(new fSanPham()); }
-        private void btnLapHoaDonBan_Click_1(object sender, EventArgs e) { LoadFormToPanel(new frmHoaDonXuat(_maNhanVien, _hoTen)); }
-        private void btnKhachHang_Click_1(object sender, EventArgs e) { LoadFormToPanel(new frmKhachHang()); }
-        private void btnDSHoaDonBan_Click(object sender, EventArgs e) { LoadFormToPanel(new frmBCBanHang()); }
-        private void btnLogOut_Click(object sender, EventArgs e) { this.Close(); }
-
->>>>>>> Stashed changes
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            fChangePassWord change = new fChangePassWord();
-            this.Hide();
+            fChangePassWord change = new fChangePassWord(_maNhanVien, _hoTen, _vaiTro);
             change.ShowDialog();
-            this.Show();
         }
 
-        private void guna2Button6_Click(object sender, EventArgs e)
+        private void guna2Button2_Click(object sender, EventArgs e)
         {
-            // Mở trang Khách hàng
-            frmKhachHang f = new frmKhachHang();
-            f.ShowDialog();
-        }
-
-        private void guna2Button5_Click(object sender, EventArgs e)
-        {
-            // Mở trang Lập hóa đơn bán (Hóa đơn xuất)
-            frmHoaDonXuat f = new frmHoaDonXuat();
-            f.ShowDialog();
-        }
-
-        private void guna2Button3_Click(object sender, EventArgs e)
-        {
-            // Mở trang Tra cứu sách (Sản phẩm)
-            fSanPham f = new fSanPham();
-            f.ShowDialog();
+            TTTaiKhoan frm = new TTTaiKhoan(_maNhanVien);
+            frm.ShowDialog();
         }
     }
 }

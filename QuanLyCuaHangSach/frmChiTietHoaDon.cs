@@ -63,7 +63,22 @@ namespace QuanLyCuaHangSach
                             FROM {table} ct 
                             JOIN tblSach s ON ct.ma_sach = s.ma_sach 
                             WHERE ct.{idCol} = '{_maHD}'";
-            dgvChiTiet.DataSource = DAO.LoadDataToTable(sql);
+            DataTable dt = DAO.LoadDataToTable(sql);
+
+            // Thêm cột STT vào DataTable
+            if (!dt.Columns.Contains("STT"))
+                dt.Columns.Add("STT", typeof(int)).SetOrdinal(0);
+            for (int i = 0; i < dt.Rows.Count; i++) dt.Rows[i]["STT"] = i + 1;
+
+            dgvChiTiet.DataSource = dt;
+
+            // Đổi tên cột hiển thị tiếng Việt
+            dgvChiTiet.Columns["STT"].HeaderText = "STT";
+            dgvChiTiet.Columns["ma_sach"].HeaderText = "Mã sách";
+            dgvChiTiet.Columns["ten_sach"].HeaderText = "Tên sách";
+            dgvChiTiet.Columns["so_luong"].HeaderText = "Số lượng";
+            dgvChiTiet.Columns[giaCol].HeaderText = _isNhap ? "Giá nhập" : "Đơn giá";
+            dgvChiTiet.Columns["ThanhTien"].HeaderText = "Thành tiền";
         }
 
         private void btnLuu_Click(object sender, EventArgs e)

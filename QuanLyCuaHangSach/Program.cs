@@ -8,7 +8,6 @@ namespace QuanLyCuaHangSach
 {
     internal static class Program
     {
-
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -17,15 +16,7 @@ namespace QuanLyCuaHangSach
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
             Application.Run(new fLogin());
-=======
-            Application.Run(new frmHoaDonNhap());
->>>>>>> Stashed changes
-=======
-            Application.Run(new frmHoaDonNhap());
->>>>>>> Stashed changes
         }
     }
 }

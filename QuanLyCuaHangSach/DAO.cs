@@ -22,6 +22,11 @@ namespace QuanLyCuaHangSach
         {
             try
             {
+                if (con == null)
+                {
+                    con = new SqlConnection(ConnectionString);
+                }
+
                 if (con.State == ConnectionState.Closed)
                 {
                     con.ConnectionString = ConnectionString;
@@ -30,7 +35,7 @@ namespace QuanLyCuaHangSach
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw;
             }
         }
         public static void Close()
@@ -49,21 +54,8 @@ namespace QuanLyCuaHangSach
         public static DataTable LoadDataToTable(string sql)
         {
             DataTable dt = new DataTable();
-            try
-            {
-                if (con == null || con.State == ConnectionState.Closed)
-                    Connect();
-
-                using (SqlDataAdapter adapter = new SqlDataAdapter(sql, DAO.con))
-                {
-                    adapter.Fill(dt);
-                }
-            }
-            catch (Exception)
-            {
-                // return empty table on error
-            }
-
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, DAO.con);
+            adapter.Fill(dt);
             return dt;
         }
 
@@ -76,105 +68,37 @@ namespace QuanLyCuaHangSach
 
         public static void FillDataToCombo(string sql, ComboBox cmb, string Keyvalue, string DisplayValue)
         {
-<<<<<<< Updated upstream
             SqlDataAdapter mydataAdapter = new SqlDataAdapter(sql, con);
             DataTable dt = new DataTable();
             mydataAdapter.Fill(dt);
-            // Set ValueMember and DisplayMember BEFORE DataSource to prevent premature SelectedIndexChanged event
+            cmb.DataSource = dt;
             cmb.ValueMember = Keyvalue;
             cmb.DisplayMember = DisplayValue;
-            cmb.DataSource = dt;
-            cmb.SelectedIndex = -1; // Reset selection to avoid triggering events with incomplete binding
-=======
-            try
-            {
-                if (con == null || con.State == ConnectionState.Closed) Connect();
-                using (SqlDataAdapter mydataAdapter = new SqlDataAdapter(sql, con))
-                {
-                    DataTable dt = new DataTable();
-                    mydataAdapter.Fill(dt);
-                    cmb.DataSource = dt;
-                    cmb.ValueMember = Keyvalue;
-                    cmb.DisplayMember = DisplayValue;
-                }
-            }
-            catch (Exception)
-            {
-                // swallow - caller can handle empty datasource
-            }
->>>>>>> Stashed changes
         }
 
         public static string getFieldValue(string sql)
         {
             string value = "";
-            try
+            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
             {
-<<<<<<< Updated upstream
-                if (con == null || con.State != ConnectionState.Open)
-                {
-                    Connect();
-                }
-                using (SqlCommand cmd = new SqlCommand(sql, con))
-                {
-                    object result = cmd.ExecuteScalar();
-                    if (result != null && result != DBNull.Value)
-                    {
-                        value = result.ToString();
-                        // Check if the value is "System.Data.DataRowView" which indicates incorrect data binding
-                        if (value == "System.Data.DataRowView")
-                        {
-                            throw new InvalidOperationException(
-                                "Lỗi: Giá trị trả về là DataRowView. Vui lòng kiểm tra việc truyền tham số từ ComboBox/DataGridView. " +
-                                "Sử dụng SelectedValue hoặc truy cập cột cụ thể thay vì ToString() trên DataRowView.");
-                        }
-                    }
-                }
+                value = reader.GetValue(0).ToString();
             }
-            catch (InvalidOperationException)
-            {
-                throw;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lỗi khi thực thi truy vấn: {ex.Message}\n\nSQL: {sql}",
-                    "Lỗi truy vấn", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw;
-=======
-                if (con == null || con.State == ConnectionState.Closed) Connect();
-                using (SqlCommand cmd = new SqlCommand(sql, con))
-                using (SqlDataReader reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        value = reader.GetValue(0).ToString();
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                // return empty on error
->>>>>>> Stashed changes
-            }
+            reader.Close();
             return value;
         }
 
         public static bool CheckKey(string sql)
         {
-            try
-            {
-                if (con == null || con.State == ConnectionState.Closed) Connect();
-                using (SqlDataAdapter mydata = new SqlDataAdapter(sql, con))
-                {
-                    DataTable table = new DataTable();
-                    mydata.Fill(table);
-                    return table.Rows.Count > 0;
-                }
-            }
-            catch (Exception)
-            {
+            SqlDataAdapter mydata = new SqlDataAdapter(sql, con);
+            DataTable table = new DataTable();
+            mydata.Fill(table);
+            if (table.Rows.Count > 0)
+                return true;
+
+            else
                 return false;
-            }
         }
 
 

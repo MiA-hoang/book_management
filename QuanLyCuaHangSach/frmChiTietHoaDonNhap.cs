@@ -17,15 +17,15 @@ namespace QuanLyCuaHangSach
             InitializeComponent();
             _maHD = maHD;
             _isNhap = isNhap;
-          
+
             this.Load += frmChiTietHoaDonNhap_Load;
             this.btnCapNhat.Click += btnCapNhat_Click;
             this.btnDong.Click += (s, ev) => this.Close();
-            
-            
-         }
 
-            
+
+        }
+
+
 
         private void frmChiTietHoaDonNhap_Load(object sender, EventArgs e)
         {
