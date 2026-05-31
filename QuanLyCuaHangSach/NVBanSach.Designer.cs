@@ -470,7 +470,7 @@
             this.Controls.Add(this.pSidebar);
             this.Controls.Add(this.pHeader);
             this.Name = "NVBanSach";
-            this.Text = "NVBanSach";
+            this.Text = "Phần mềm quản lí cửa hàng sách";
             this.Load += new System.EventHandler(this.NVBanSach_Load);
             this.pHeader.ResumeLayout(false);
             this.pSidebar.ResumeLayout(false);

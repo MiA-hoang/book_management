@@ -42,3 +42,7 @@ D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\System.Numerics.V
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\System.Security.Cryptography.Xml.xml
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.TTTaiKhoan.resources
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmDSHoaDonNhap.resources
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmChiTietHoaDonNhap.resources
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmDSHoaDonXuat.resources
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmChiTietHoaDonXuat.resources

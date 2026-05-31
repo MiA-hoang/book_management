@@ -300,9 +300,9 @@
             this.guna2Button6.ForeColor = System.Drawing.Color.White;
             this.guna2Button6.Location = new System.Drawing.Point(41, 200);
             this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(250, 46);
+            this.guna2Button6.Size = new System.Drawing.Size(283, 46);
             this.guna2Button6.TabIndex = 2;
-            this.guna2Button6.Text = "📊 DS hóa đơn bán";
+            this.guna2Button6.Text = "📊 DS hóa đơn nhập";
             this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
             // guna2Button7
@@ -444,7 +444,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "nvKho";
-            this.Text = "nvKho";
+            this.Text = "Phần mềm quản lí cửa hàng sách";
             this.Load += new System.EventHandler(this.nvKho_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);

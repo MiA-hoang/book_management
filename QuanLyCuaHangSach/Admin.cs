@@ -64,8 +64,8 @@ namespace QuanLyCuaHangSach
         private void guna2Button5_Click(object sender, EventArgs e) { LoadFormToPanel(new frmNhaCungCap()); }
         private void guna2Button11_Click(object sender, EventArgs e) { LoadFormToPanel(new frmBCNhap()); }
         private void guna2Button10_Click(object sender, EventArgs e) { LoadFormToPanel(new frmBCBanHang()); }
-        private void guna2Button7_Click(object sender, EventArgs e) { LoadFormToPanel(new frmHoaDonNhap()); }
-        private void guna2Button8_Click(object sender, EventArgs e) { LoadFormToPanel(new frmHoaDonXuat()); }
+        private void guna2Button7_Click(object sender, EventArgs e) { LoadFormToPanel(new frmDSHoaDonNhap()); }
+        private void guna2Button8_Click(object sender, EventArgs e) { LoadFormToPanel(new frmDSHoaDonXuat()); }
         private void btnLogOut_Click(object sender, EventArgs e) { this.Close(); }
 
         private void guna2Button2_Click(object sender, EventArgs e)

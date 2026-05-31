@@ -21,7 +21,7 @@ namespace QuanLyCuaHangSach
         {
             _isLoaded = true;
             LoadThongKe();
-            SetAllLabelColor(this);
+            
         }
         private void LoadThongKe()
         {
@@ -70,23 +70,6 @@ namespace QuanLyCuaHangSach
                     dgvTopSach.Columns["so_luong"].Width = 150;
                     dgvTopSach.Columns["ten_sach"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 }
-                dgvTopSach.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(58, 111, 168);
-                dgvTopSach.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-                dgvTopSach.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
-                dgvTopSach.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(224, 235, 245);
-                dgvTopSach.DefaultCellStyle.Font = new Font("Arial", 10);
-                dgvTopSach.BorderStyle = BorderStyle.None;
-                dgvTopSach.EnableHeadersVisualStyles = false;
-                dgvTopSach.RowHeadersVisible = false;
-                dgvTopSach.ColumnHeadersHeight = 35;
-                dgvTopSach.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-                dgvTopSach.BackgroundColor = Color.White;
-                dgvTopSach.GridColor = Color.LightGray;
-                dgvTopSach.DefaultCellStyle.BackColor = Color.White;
-                dgvTopSach.DefaultCellStyle.ForeColor = Color.Black;
-                dgvTopSach.DefaultCellStyle.SelectionBackColor = Color.FromArgb(58, 111, 168);
-                dgvTopSach.DefaultCellStyle.SelectionForeColor = Color.White;
-
 
                 //Doanh thu theo thang
                 string sqlThang = $@"SELECT YEAR(ngay_dat) as nam,
@@ -111,17 +94,7 @@ namespace QuanLyCuaHangSach
                         Convert.ToDecimal(row["doanh_thu"])
                     );
                 }
-                //Style
-                chartDoanhThu.ChartAreas[0].AxisX.TitleForeColor = Color.Black;
-                chartDoanhThu.ChartAreas[0].AxisY.TitleForeColor = Color.Black;
-                chartDoanhThu.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.Black;
-                chartDoanhThu.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.Black;
-                chartDoanhThu.ChartAreas[0].AxisX.LineColor = Color.FromArgb(58, 111, 168);
-                chartDoanhThu.ChartAreas[0].AxisY.LineColor = Color.FromArgb(58, 111, 168);
-                chartDoanhThu.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.FromArgb(58, 111, 168);
-                chartDoanhThu.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.FromArgb(58, 111, 168);
-                chartDoanhThu.Legends.Clear();
-                seriesBar.Color = Color.FromArgb(58, 111, 168);
+             
                 foreach (var point in seriesBar.Points)
                 {
                     point.ToolTip = "#AXISLABEL\nDoanh thu: #VALY{N0} VNĐ";
@@ -145,13 +118,7 @@ namespace QuanLyCuaHangSach
                 {
                     seriesPie.Points.AddXY(row["ten_sach"].ToString(), Convert.ToDecimal(row["doanh_thu"]));
                 }
-                //Style
-                chartTiLe.BackColor = Color.Transparent;
-                chartTiLe.ChartAreas[0].BackColor = Color.Transparent;
-                seriesPie.LabelForeColor = Color.Black;
-                seriesPie.Font = new Font("Arial", 9, FontStyle.Bold);
-                chartTiLe.Legends.Clear();  
-                seriesPie["PieLabelStyle"] = "Outside";
+               
                 foreach (var point in seriesPie.Points)
                 {
                     point.ToolTip = "#AXISLABEL\nDoanh thu: #VALY{N0} VNĐ";
@@ -176,20 +143,7 @@ namespace QuanLyCuaHangSach
         {
             if (_isLoaded) LoadThongKe();
         }
-        private void SetAllLabelColor(Control parent)
-        {
-            foreach (Control c in parent.Controls)
-            {
-                if (c is Label)
-                {
-                    c.ForeColor = Color.Black;
-                }
 
-                if (c.HasChildren)
-                {
-                    SetAllLabelColor(c);
-                }
-            }
-        }
+       
     }
 }

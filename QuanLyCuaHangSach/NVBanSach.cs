@@ -58,7 +58,7 @@ namespace QuanLyCuaHangSach
         private void btnTraCuuSach_Click_1(object sender, EventArgs e){ LoadFormToPanel(new fSanPham());}
         private void btnLapHoaDonBan_Click_1(object sender, EventArgs e) { LoadFormToPanel(new frmHoaDonXuat()); }
         private void btnKhachHang_Click_1(object sender, EventArgs e) { LoadFormToPanel(new frmKhachHang());}
-        private void btnDSHoaDonBan_Click(object sender, EventArgs e){ LoadFormToPanel(new frmBCBanHang());}
+        private void btnDSHoaDonBan_Click(object sender, EventArgs e){ LoadFormToPanel(new frmDSHoaDonXuat());}
         private void btnLogOut_Click(object sender, EventArgs e){ this.Close();}
 
         private void guna2Button1_Click(object sender, EventArgs e)
