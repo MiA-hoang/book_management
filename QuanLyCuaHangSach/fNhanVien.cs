@@ -40,90 +40,38 @@ namespace QuanLyCuaHangSach
             // ===== ẨN PASSWORD =====
             dgvNhanVien.Columns["mat_khau"].Visible = false;
 
-            // ===== CHỈNH SIZE =====
-            dgvNhanVien.Columns["ma_nhan_vien"].FillWeight = 15;
-            dgvNhanVien.Columns["ten_dang_nhap"].FillWeight = 20;
-            dgvNhanVien.Columns["ho_ten"].FillWeight = 25;
-            dgvNhanVien.Columns["vai_tro"].FillWeight = 15;
-            dgvNhanVien.Columns["trang_thai"].FillWeight = 15;
         }
         private string TaoMaNhanVien()
         {
-            string ma = "NV01";
+            string ma = "EMP001";
 
             DAO.Connect();
-            string sql = @"SELECT TOP 1 ma_nhan_vien
-                           FROM tblNhanVien
-                           ORDER BY ma_nhan_vien DESC";
+
+            string sql = @"
+        SELECT TOP 1 ma_nhan_vien
+        FROM tblNhanVien
+        ORDER BY ma_nhan_vien DESC";
+
             string maCuoi = DAO.getFieldValue(sql);
+
             DAO.Close();
 
             if (maCuoi != "")
             {
-                int so = int.Parse(maCuoi.Substring(2)) + 1;
-                ma = "NV" + so.ToString("00");
+                int so = int.Parse(maCuoi.Substring(3)) + 1;
+                ma = "EMP" + so.ToString("000");
             }
 
             return ma;
         }
         private void fNhanVien_Load(object sender, EventArgs e)
         {
-            cboVaiTro.Items.Add("Quản trị");
-            cboVaiTro.Items.Add("Bán hàng");
-            cboVaiTro.Items.Add("Kho");
+            cboVaiTro.Items.Add("Nhân viên quản lí");
+            cboVaiTro.Items.Add("Nhân viên bán sách");
+            cboVaiTro.Items.Add("Nhân viên kho");
 
-            cboTrangThai.Items.Add("Hoạt động");
-            cboTrangThai.Items.Add("Khóa");
-
-            // ===== CẤU HÌNH DGV =====
-            dgvNhanVien.Theme =
-                Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
-
-            dgvNhanVien.ColumnHeadersDefaultCellStyle.BackColor =
-                Color.White;
-
-            dgvNhanVien.CellBorderStyle =
-    DataGridViewCellBorderStyle.None;
-
-            dgvNhanVien.AutoSizeColumnsMode =
-                DataGridViewAutoSizeColumnsMode.Fill;
-
-            dgvNhanVien.SelectionMode =
-                DataGridViewSelectionMode.FullRowSelect;
-
-            dgvNhanVien.AlternatingRowsDefaultCellStyle.BackColor =
-    Color.FromArgb(248, 250, 252);
-
-            dgvNhanVien.MultiSelect = false;
-
-            dgvNhanVien.AllowUserToAddRows = false;
-
-            dgvNhanVien.RowHeadersVisible = false;
-
-            dgvNhanVien.RowTemplate.Height = 35;
-
-            dgvNhanVien.ColumnHeadersHeight = 40;
-
-            dgvNhanVien.ReadOnly = true;
-
-            dgvNhanVien.CellFormatting += dgvNhanVien_CellFormatting;
-
-           
-            // ===== MÀU NÚT =====
-            //btnThem.FillColor =
-            //    Color.FromArgb(99, 102, 241);
-
-            //btnSua.FillColor =
-            //    Color.FromArgb(37, 99, 235);
-
-            //btnXoa.FillColor =
-            //    Color.FromArgb(239, 68, 68);
-
-            //btnLamMoi.FillColor =
-            //    Color.FromArgb(249, 115, 22);
-
-            //btnLuu.FillColor =
-            //    Color.FromArgb(34, 197, 94);
+            cboTrangThai.Items.Add("Đang làm");
+            cboTrangThai.Items.Add("Nghỉ việc");
 
             // ===== SEARCH =====
             txtTimKiem.PlaceholderText =
@@ -178,6 +126,7 @@ namespace QuanLyCuaHangSach
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            btnLamMoi_Click(sender, e);
             txtMaNV.Text = TaoMaNhanVien();
 
             txtTenNV.Clear();
@@ -207,39 +156,66 @@ namespace QuanLyCuaHangSach
 
             DAO.Connect();
 
-            string sql = @"INSERT INTO tblNhanVien
+            string checkSql = @"SELECT COUNT(*)
+                    FROM tblNhanVien
+                    WHERE ten_dang_nhap = @tk";
+
+            SqlCommand checkCmd =
+                new SqlCommand(checkSql, DAO.con);
+
+            checkCmd.Parameters.AddWithValue(
+                "@tk", txtTenDangNhap.Text.Trim());
+
+            int count = (int)checkCmd.ExecuteScalar();
+
+            if (count > 0)
+            {
+                MessageBox.Show(
+                    "Tên đăng nhập đã tồn tại, vui lòng nhập tên khác!",
+                    "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+
+                txtTenDangNhap.Focus();
+                txtTenDangNhap.SelectAll();
+
+                DAO.Close();
+                return;
+
+                string sql = @"INSERT INTO tblNhanVien
                            VALUES
                            (@manv,@tk,@mk,@hoten,@vaitro,@trangthai)";
 
-            SqlCommand cmd =
-                new SqlCommand(sql, DAO.con);
+                SqlCommand cmd =
+                    new SqlCommand(sql, DAO.con);
 
-            cmd.Parameters.AddWithValue(
-                "@manv", txtMaNV.Text);
+                cmd.Parameters.AddWithValue(
+                    "@manv", txtMaNV.Text);
 
-            cmd.Parameters.AddWithValue(
-                "@tk", txtTenDangNhap.Text);
+                cmd.Parameters.AddWithValue(
+                    "@tk", txtTenDangNhap.Text);
 
-            cmd.Parameters.AddWithValue(
-                "@mk", txtMatKhau.Text);
+                cmd.Parameters.AddWithValue(
+                    "@mk", txtMatKhau.Text);
 
-            cmd.Parameters.AddWithValue(
-                "@hoten", txtTenNV.Text);
+                cmd.Parameters.AddWithValue(
+                    "@hoten", txtTenNV.Text);
 
-            cmd.Parameters.AddWithValue(
-                "@vaitro", cboVaiTro.Text);
+                cmd.Parameters.AddWithValue(
+                    "@vaitro", cboVaiTro.Text);
 
-            cmd.Parameters.AddWithValue(
-                "@trangthai", cboTrangThai.Text);
+                cmd.Parameters.AddWithValue(
+                    "@trangthai", cboTrangThai.Text);
 
-            cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
 
-            DAO.Close();
+                DAO.Close();
 
-            MessageBox.Show("Lưu thành công!");
+                MessageBox.Show("Lưu thành công!");
 
-            LoadData();
-
+                LoadData();
+                btnLamMoi_Click(sender, e);
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -357,15 +333,13 @@ namespace QuanLyCuaHangSach
 
             DAO.Close();
         }
-        private void dgvNhanVien_CellFormatting(
-    object sender,
-    DataGridViewCellFormattingEventArgs e)
+        private void dgvNhanVien_CellFormatting( object sender,DataGridViewCellFormattingEventArgs e)
         {
             if (dgvNhanVien.Columns[e.ColumnIndex].Name == "trang_thai")
             {
                 if (e.Value != null)
                 {
-                    if (e.Value.ToString() == "Hoạt động")
+                    if (e.Value.ToString() == "Đang làm")
                     {
                         e.CellStyle.ForeColor = Color.FromArgb(34, 197, 94);
                         e.CellStyle.SelectionForeColor = Color.FromArgb(34, 197, 94);

@@ -40,7 +40,7 @@ namespace QuanLyCuaHangSach
             mskSDT.Text = "";
             txtTuKhoa.Text = "";
 
-            txtMaNCC.Enabled = true;
+            txtMaNCC.Enabled = false;
         }
         private void Load_DataGridView()
         {
@@ -53,7 +53,7 @@ namespace QuanLyCuaHangSach
 
             tblNhaCungCap = DAO.LoadDataToTable(sql);
 
-            dgvNCC.DataSource = tblNhaCungCap;
+            dgvNCC.DataSource = tblNhaCungCap;      
             dgvNCC.Columns[0].HeaderText = "Mã NCC";
             dgvNCC.Columns[1].HeaderText = "Tên nhà cung cấp";
             dgvNCC.Columns[2].HeaderText = "Số điện thoại";
@@ -108,8 +108,10 @@ namespace QuanLyCuaHangSach
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
 
-            txtMaNCC.Enabled = true;
-            txtMaNCC.Focus();
+            txtMaNCC.Text = TaoMaNCC();
+            txtMaNCC.Enabled = false;
+
+            txtTenNCC.Focus();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -451,6 +453,27 @@ namespace QuanLyCuaHangSach
             btnLuu.Enabled = false;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
+        }
+        // Them ham sinh mã tự động
+        private string TaoMaNCC()
+        {
+            string sql = @"
+            SELECT TOP 1 ma_nha_cung_cap
+            FROM tblNhaCungCap
+            ORDER BY ma_nha_cung_cap DESC";
+
+                    SqlCommand cmd = new SqlCommand(sql, DAO.con);
+
+                    object result = cmd.ExecuteScalar();
+
+                    if (result == null)
+                        return "NCC001";
+
+                    string maCu = result.ToString();
+
+                    int so = int.Parse(maCu.Substring(3));
+
+                    return "NCC" + (so + 1).ToString("D3");
         }
     }
 }

@@ -36,6 +36,10 @@
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTongSoSachBan = new System.Windows.Forms.Label();
             this.lblTongDoanhThu = new System.Windows.Forms.Label();
             this.lblTongSoDon = new System.Windows.Forms.Label();
@@ -76,7 +80,7 @@
             this.lblTongSoSachBan.BackColor = System.Drawing.Color.White;
             this.lblTongSoSachBan.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblTongSoSachBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(100)))));
-            this.lblTongSoSachBan.Location = new System.Drawing.Point(701, 720);
+            this.lblTongSoSachBan.Location = new System.Drawing.Point(765, 719);
             this.lblTongSoSachBan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTongSoSachBan.Name = "lblTongSoSachBan";
             this.lblTongSoSachBan.Size = new System.Drawing.Size(156, 25);
@@ -89,7 +93,7 @@
             this.lblTongDoanhThu.BackColor = System.Drawing.Color.White;
             this.lblTongDoanhThu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblTongDoanhThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(100)))));
-            this.lblTongDoanhThu.Location = new System.Drawing.Point(701, 872);
+            this.lblTongDoanhThu.Location = new System.Drawing.Point(765, 872);
             this.lblTongDoanhThu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTongDoanhThu.Name = "lblTongDoanhThu";
             this.lblTongDoanhThu.Size = new System.Drawing.Size(144, 25);
@@ -102,7 +106,7 @@
             this.lblTongSoDon.BackColor = System.Drawing.Color.White;
             this.lblTongSoDon.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblTongSoDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(100)))));
-            this.lblTongSoDon.Location = new System.Drawing.Point(701, 570);
+            this.lblTongSoDon.Location = new System.Drawing.Point(765, 570);
             this.lblTongSoDon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTongSoDon.Name = "lblTongSoDon";
             this.lblTongSoDon.Size = new System.Drawing.Size(118, 25);
@@ -334,13 +338,42 @@
             // dgvBanHang
             // 
             this.dgvBanHang.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBanHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBanHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBanHang.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBanHang.Location = new System.Drawing.Point(18, 549);
             this.dgvBanHang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvBanHang.Name = "dgvBanHang";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBanHang.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvBanHang.RowHeadersVisible = false;
             this.dgvBanHang.RowHeadersWidth = 62;
-            this.dgvBanHang.Size = new System.Drawing.Size(675, 409);
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvBanHang.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvBanHang.Size = new System.Drawing.Size(739, 431);
             this.dgvBanHang.TabIndex = 26;
             // 
             // label6

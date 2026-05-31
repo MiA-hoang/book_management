@@ -15,7 +15,6 @@ namespace QuanLyCuaHangSach
     public partial class fSanPham : Form
     {
         DataTable tblSach;
-        bool _dangLoad = false;
         public fSanPham()
         {
             InitializeComponent();
@@ -23,12 +22,15 @@ namespace QuanLyCuaHangSach
 
         private void fSanPham_Load(object sender, EventArgs e)
         {
+            DAO.Connect();
+
+
             btnLuu.Enabled = false;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
 
             Load_DataGridView();
-            DAO.Connect();
+
             DAO.FillDataToCombo(
                 "SELECT ma_danh_muc, ten_danh_muc FROM tblDanhMuc",
                 cboDanhMuc,
@@ -48,7 +50,6 @@ namespace QuanLyCuaHangSach
                 "ma_danh_muc",
                 "ten_danh_muc"
             );
-            DAO.Close();
 
             cboLocDanhMuc.SelectedIndex = -1;
             cboDanhMuc.SelectedIndex = -1;
@@ -58,7 +59,6 @@ namespace QuanLyCuaHangSach
         }
         private void ResetValues()
         {
-            _dangLoad = true;
             txtMaSach.Text = "";
             txtTenSach.Text = "";
 
@@ -77,7 +77,7 @@ namespace QuanLyCuaHangSach
             txtTuKhoa.Text = "";
             txtGiaMin.Text = "";
             txtGiaMax.Text = "";
-            _dangLoad = false;
+            txtMaSach.Enabled = false;
         }
         private void Load_DataGridView()
         {
@@ -108,6 +108,7 @@ namespace QuanLyCuaHangSach
             dgvSach.Columns[1].HeaderText = "Tên sách";
             dgvSach.Columns[2].HeaderText = "Giá bán";
             dgvSach.Columns[3].HeaderText = "Số lượng";
+
             dgvSach.Columns[5].HeaderText = "Danh mục";
             dgvSach.Columns[7].HeaderText = "Tác giả";
 
@@ -118,31 +119,37 @@ namespace QuanLyCuaHangSach
 
             dgvSach.AllowUserToAddRows = false;
 
-            dgvSach.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dgvSach.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvSach.MultiSelect = false;
-            dgvSach.RowHeadersVisible = true;
-            dgvSach.MultiSelect = true;
-            dgvSach.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvSach.EditMode =
+                DataGridViewEditMode.EditProgrammatically;
         }
 
         private void dgvSach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0) return;
-            if (tblSach == null ||tblSach.Rows.Count == 0)
+            if (tblSach.Rows.Count == 0)
             {
                 MessageBox.Show("Không có dữ liệu!");
                 return;
             }
-            _dangLoad = true;
 
-            txtMaSach.Text = dgvSach.CurrentRow.Cells[0].Value.ToString();
-            txtTenSach.Text = dgvSach.CurrentRow.Cells[1].Value.ToString();
-            txtGiaBan.Text = dgvSach.CurrentRow.Cells[2].Value.ToString();
-            txtSoLuong.Text = dgvSach.CurrentRow.Cells[3].Value.ToString();
+            txtMaSach.Text =
+                dgvSach.CurrentRow.Cells[0].Value.ToString();
+
+            txtTenSach.Text =
+                dgvSach.CurrentRow.Cells[1].Value.ToString();
+
+            txtGiaBan.Text =
+                dgvSach.CurrentRow.Cells[2].Value.ToString();
+
+            txtSoLuong.Text =
+                dgvSach.CurrentRow.Cells[3].Value.ToString();
+
             // lấy mã ẩn để đổ vào combobox
-            cboDanhMuc.SelectedValue = dgvSach.CurrentRow.Cells[4].Value;
-            cboTacGia.SelectedValue = dgvSach.CurrentRow.Cells[6].Value;
+            cboDanhMuc.SelectedValue =
+                dgvSach.CurrentRow.Cells[4].Value;
+
+            cboTacGia.SelectedValue =
+                dgvSach.CurrentRow.Cells[6].Value;
+
             txtAnh.Text =
                      dgvSach.CurrentRow.Cells[8].Value == DBNull.Value
                      ? ""
@@ -168,9 +175,9 @@ namespace QuanLyCuaHangSach
                 picSach.Image = null;
             }
             txtMaSach.Enabled = false;
+
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
-            _dangLoad = false;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -184,8 +191,9 @@ namespace QuanLyCuaHangSach
 
             picSach.Image = null;
 
-            txtMaSach.Enabled = true;
-            txtMaSach.Focus();
+            txtMaSach.Text = TaoMaSP();
+            txtMaSach.Enabled = false;
+            txtTenSach.Focus();
         }
 
         private void btnChonAnh_Click(object sender, EventArgs e)
@@ -230,15 +238,15 @@ namespace QuanLyCuaHangSach
             + txtMaSach.Text.Trim()
             + "'";
 
-            if (DAO.CheckKey(sqlCheck))
-            {
-                MessageBox.Show("Mã sách đã tồn tại!");
+            //if (DAO.CheckKey(sqlCheck))
+            //{
+            //    MessageBox.Show("Mã sách đã tồn tại!");
 
-                txtMaSach.Focus();
-                txtMaSach.Text = "";
+            //    txtMaSach.Focus();
+            //    txtMaSach.Text = "";
 
-                return;
-            }
+            //    return;
+            //}
 
             if (txtTenSach.Text.Trim().Length == 0)
             {
@@ -443,19 +451,32 @@ namespace QuanLyCuaHangSach
                 return;
             }
 
-            // hỏi xác nhận
             if (MessageBox.Show("Bạn có chắc muốn xóa sách này không?",
                                 "Xác nhận",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question) == DialogResult.No)
+                                MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question) == DialogResult.No)
             {
                 return;
             }
 
+            string sqlCheck = @"
+                    SELECT ma_sach
+                    FROM tblChiTietNhap
+                    WHERE ma_sach = N'"
+                + txtMaSach.Text.Trim()
+                + "'";
+
+            if (DAO.CheckKey(sqlCheck))
+            {
+                MessageBox.Show(
+                    "Sách đã phát sinh phiếu nhập, không thể xóa!");
+                return;
+            }
+
             sql = @"DELETE FROM tblSach
-                  WHERE ma_sach = N'"
-                  + txtMaSach.Text.Trim()
-                  + "'";
+            WHERE ma_sach = N'"
+                    + txtMaSach.Text.Trim()
+                    + "'";
 
             SqlCommand cmd = new SqlCommand(sql, DAO.con);
             cmd.ExecuteNonQuery();
@@ -577,6 +598,21 @@ namespace QuanLyCuaHangSach
             btnLuu.Enabled = false;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
+        }
+        // Them ham sinh mã tự động
+        private string TaoMaSP()
+        {
+            string sql = @"
+                SELECT ISNULL(
+                    MAX(CAST(SUBSTRING(ma_sach, 5, LEN(ma_sach)) AS INT)),
+                    0)
+                FROM tblSach";
+
+            SqlCommand cmd = new SqlCommand(sql, DAO.con);
+
+            int so = Convert.ToInt32(cmd.ExecuteScalar());
+
+            return "BOOK" + (so + 1).ToString("D3");
         }
     }
 }

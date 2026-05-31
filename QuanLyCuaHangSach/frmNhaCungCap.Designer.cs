@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpThongTinNCC = new System.Windows.Forms.GroupBox();
             this.mskSDT = new System.Windows.Forms.MaskedTextBox();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -43,6 +46,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.grpTimKiem = new System.Windows.Forms.GroupBox();
+            this.cboLocTimKiem = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
@@ -54,8 +59,6 @@
             this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
             this.btnSua = new Guna.UI2.WinForms.Guna2Button();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cboLocTimKiem = new System.Windows.Forms.ComboBox();
             this.grpThongTinNCC.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -90,7 +93,7 @@
             // 
             this.mskSDT.Location = new System.Drawing.Point(669, 45);
             this.mskSDT.Name = "mskSDT";
-            this.mskSDT.Size = new System.Drawing.Size(275, 30);
+            this.mskSDT.Size = new System.Drawing.Size(275, 35);
             this.mskSDT.TabIndex = 16;
             // 
             // btnLuu
@@ -122,7 +125,7 @@
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(7, 5);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(236, 28);
+            this.label9.Size = new System.Drawing.Size(285, 32);
             this.label9.TabIndex = 0;
             this.label9.Text = "Thông tin nhà cung cấp";
             // 
@@ -130,7 +133,7 @@
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(669, 102);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(275, 30);
+            this.txtDiaChi.Size = new System.Drawing.Size(275, 35);
             this.txtDiaChi.TabIndex = 11;
             // 
             // label6
@@ -159,7 +162,7 @@
             // 
             this.txtTenNCC.Location = new System.Drawing.Point(149, 102);
             this.txtTenNCC.Name = "txtTenNCC";
-            this.txtTenNCC.Size = new System.Drawing.Size(275, 30);
+            this.txtTenNCC.Size = new System.Drawing.Size(275, 35);
             this.txtTenNCC.TabIndex = 3;
             // 
             // lblTenNCC
@@ -178,7 +181,7 @@
             this.txtMaNCC.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaNCC.Location = new System.Drawing.Point(149, 44);
             this.txtMaNCC.Name = "txtMaNCC";
-            this.txtMaNCC.Size = new System.Drawing.Size(275, 31);
+            this.txtMaNCC.Size = new System.Drawing.Size(275, 36);
             this.txtMaNCC.TabIndex = 1;
             // 
             // lblMaNCC
@@ -207,7 +210,7 @@
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(6, 6);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 20);
+            this.label10.Size = new System.Drawing.Size(95, 25);
             this.label10.TabIndex = 0;
             this.label10.Text = "Tìm kiếm ";
             // 
@@ -229,6 +232,31 @@
             this.grpTimKiem.TabIndex = 3;
             this.grpTimKiem.TabStop = false;
             // 
+            // cboLocTimKiem
+            // 
+            this.cboLocTimKiem.FormattingEnabled = true;
+            this.cboLocTimKiem.Items.AddRange(new object[] {
+            "Tất cả",
+            "Mã NCC",
+            "Tên NCC",
+            "SĐT",
+            "Địa chỉ"});
+            this.cboLocTimKiem.Location = new System.Drawing.Point(669, 45);
+            this.cboLocTimKiem.Name = "cboLocTimKiem";
+            this.cboLocTimKiem.Size = new System.Drawing.Size(187, 36);
+            this.cboLocTimKiem.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(527, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 33);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Lọc theo";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Gainsboro;
@@ -244,7 +272,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 28);
+            this.label1.Size = new System.Drawing.Size(126, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tìm kiếm ";
             // 
@@ -278,7 +306,7 @@
             // 
             this.txtTuKhoa.Location = new System.Drawing.Point(149, 43);
             this.txtTuKhoa.Name = "txtTuKhoa";
-            this.txtTuKhoa.Size = new System.Drawing.Size(275, 30);
+            this.txtTuKhoa.Size = new System.Drawing.Size(275, 35);
             this.txtTuKhoa.TabIndex = 0;
             // 
             // dgvNCC
@@ -286,11 +314,33 @@
             this.dgvNCC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNCC.BackgroundColor = System.Drawing.Color.White;
             this.dgvNCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvNCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNCC.ColumnHeadersHeight = 35;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvNCC.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvNCC.Location = new System.Drawing.Point(12, 364);
             this.dgvNCC.Name = "dgvNCC";
             this.dgvNCC.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNCC.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvNCC.RowHeadersVisible = false;
             this.dgvNCC.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvNCC.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvNCC.RowTemplate.Height = 24;
             this.dgvNCC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNCC.Size = new System.Drawing.Size(1052, 285);
@@ -392,34 +442,9 @@
             this.btnThem.Text = "➕ Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(527, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 33);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Lọc theo";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cboLocTimKiem
-            // 
-            this.cboLocTimKiem.FormattingEnabled = true;
-            this.cboLocTimKiem.Items.AddRange(new object[] {
-            "Tất cả",
-            "Mã NCC",
-            "Tên NCC",
-            "SĐT",
-            "Địa chỉ"});
-            this.cboLocTimKiem.Location = new System.Drawing.Point(669, 45);
-            this.cboLocTimKiem.Name = "cboLocTimKiem";
-            this.cboLocTimKiem.Size = new System.Drawing.Size(187, 31);
-            this.cboLocTimKiem.TabIndex = 15;
-            // 
             // frmNhaCungCap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1063, 657);

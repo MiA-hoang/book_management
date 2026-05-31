@@ -39,9 +39,10 @@ namespace QuanLyCuaHangSach
             txtTenDN.Text = r["ten_dang_nhap"].ToString();
             txtTrangThai.Text = r["trang_thai"].ToString();
 
-            string hoTen = r["ho_ten"].ToString();
-            lblAvatar.Text = hoTen.Length > 0
-                ? hoTen[hoTen.Length - 1].ToString().ToUpper()
+            string hoTen = r["ho_ten"].ToString().Trim();
+            string[] parts = hoTen.Split(' ');
+            lblAvatar.Text = parts.Length > 0
+                ? parts[parts.Length - 1].Substring(0, 1).ToUpper()
                 : "?";
 
             lblTenNV.Text = hoTen;

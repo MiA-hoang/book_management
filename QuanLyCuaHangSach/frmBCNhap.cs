@@ -98,7 +98,7 @@ namespace QuanLyCuaHangSach
             cboNam.Items.AddRange(new object[] { "Tất cả", "2023", "2024", "2025", "2026" });
             cboNam.SelectedIndex = 0;
 
-            cboTrangThaiDon.Items.AddRange(new object[] { "Chờ nhập", "Đã nhập kho", "Đã hủy" });
+            cboTrangThaiDon.Items.AddRange(new object[] {"Tất cả", "Chờ nhập", "Đã nhập kho", "Đã hủy" });
             cboTrangThaiDon.SelectedIndex = 0;
             try
             {

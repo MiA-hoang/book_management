@@ -29,8 +29,6 @@ namespace QuanLyCuaHangSach
                 DAO.LoadDataToTable(sql);
 
             DAO.Close();
-            if (dgvKhachHang.DataSource is DataTable dt)
-                dt.DefaultView.RowFilter = "";
         }
         private string TaoMaKhachHang()
         {
@@ -59,40 +57,14 @@ namespace QuanLyCuaHangSach
         }
         private void frmKhachHang_Load(object sender, EventArgs e)
         {
-            dgvKhachHang.Theme =
-                Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
-
-            dgvKhachHang.ColumnHeadersDefaultCellStyle.BackColor =
-                Color.White;
-
-            dgvKhachHang.CellBorderStyle =
-                DataGridViewCellBorderStyle.SingleHorizontal;
-            btnThem.FillColor =
-        Color.FromArgb(99, 102, 241);
-
-            btnLuu.FillColor =
-                Color.FromArgb(34, 197, 94);
-
-            btnSua.FillColor =
-                Color.FromArgb(37, 99, 235);
-
-            btnXoa.FillColor =
-                Color.FromArgb(239, 68, 68);
-
-            btnLamMoi.FillColor =
-                Color.FromArgb(249, 115, 22);
-            txtTimKiem.PlaceholderText =
-    "Tìm theo mã, tên, SĐT...";
-
+            txtTimKiem.PlaceholderText ="Tìm theo mã, tên, SĐT...";
             LoadData();
-
             txtMaKH.Enabled = false;
             dgvKhachHang.Columns["ma_khach_hang"].HeaderText = "Mã KH";
             dgvKhachHang.Columns["ten_khach_hang"].HeaderText = "Tên khách hàng";
             dgvKhachHang.Columns["so_dien_thoai"].HeaderText = "Số điện thoại";
             dgvKhachHang.Columns["dia_chi"].HeaderText = "Địa chỉ";
         }
-
         private void dgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -120,7 +92,6 @@ namespace QuanLyCuaHangSach
             txtTenKH.Clear();
             txtSDT.Clear();
             txtDiaChi.Clear();
-
             txtTenKH.Focus();
         }
 
