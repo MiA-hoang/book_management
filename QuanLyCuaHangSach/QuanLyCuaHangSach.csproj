@@ -8,10 +8,15 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>QuanLyCuaHangSach</RootNamespace>
     <AssemblyName>QuanLyCuaHangSach</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+<<<<<<< Updated upstream
+=======
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+>>>>>>> Stashed changes
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -113,6 +118,30 @@
     <Compile Include="frmBCNhap.Designer.cs">
       <DependentUpon>frmBCNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmChiTietHoaDonNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChiTietHoaDonNhap.Designer.cs">
+      <DependentUpon>frmChiTietHoaDonNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChiTietHoaDonXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChiTietHoaDonXuat.Designer.cs">
+      <DependentUpon>frmChiTietHoaDonXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSHoaDonNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSHoaDonNhap.Designer.cs">
+      <DependentUpon>frmDSHoaDonNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSHoaDonXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSHoaDonXuat.Designer.cs">
+      <DependentUpon>frmDSHoaDonXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHoaDonNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,7 +200,31 @@
       <DependentUpon>fNhanVien.cs</DependentUpon>
     </EmbeddedResource>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+    <EmbeddedResource Include="frmBCBanHang.resx">
+      <DependentUpon>frmBCBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBCKinhDoanh.resx">
+      <DependentUpon>frmBCKinhDoanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBCNhap.resx">
+      <DependentUpon>frmBCNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChiTietHoaDonNhap.resx">
+      <DependentUpon>frmChiTietHoaDonNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChiTietHoaDonXuat.resx">
+      <DependentUpon>frmChiTietHoaDonXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSHoaDonNhap.resx">
+      <DependentUpon>frmDSHoaDonNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSHoaDonXuat.resx">
+      <DependentUpon>frmDSHoaDonXuat.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> Stashed changes
     <EmbeddedResource Include="frmHoaDonNhap.resx">
       <DependentUpon>frmHoaDonNhap.cs</DependentUpon>
     </EmbeddedResource>

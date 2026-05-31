@@ -12,6 +12,9 @@ namespace QuanLyCuaHangSach
         public DateTime InvoiceDate { get; set; }
         public string PartyLabel { get; set; }
         public string PartyName { get; set; }
+        public string CustomerPhone { get; set; }
+        public string CustomerAddress { get; set; }
+        public string EmployeeName { get; set; }
         public DataGridView Data { get; set; }
         public string TotalText { get; set; }
 
@@ -38,14 +41,20 @@ namespace QuanLyCuaHangSach
             currentY += 25;
             g.DrawString($"Ngày lập: {InvoiceDate:dd/MM/yyyy}", fontNormal, Brushes.Black, margin, currentY);
             currentY += 25;
-            g.DrawString($"{PartyLabel}: {PartyName}", fontNormal, Brushes.Black, margin, currentY);
+            g.DrawString($"{PartyLabel}: {PartyName}", fontHeader, Brushes.Black, margin, currentY);
+            currentY += 25;
+            g.DrawString($"Số điện thoại: {CustomerPhone}", fontNormal, Brushes.Black, margin, currentY);
+            currentY += 25;
+            g.DrawString($"Địa chỉ: {CustomerAddress}", fontNormal, Brushes.Black, margin, currentY);
+            currentY += 25;
+            g.DrawString($"Nhân viên lập: {EmployeeName}", fontNormal, Brushes.Black, margin, currentY);
             currentY += 50;
 
             // Định nghĩa các cột (Tổng cộng khoảng 700-750 đơn vị để vừa A4)
             float colTen = margin;         // Cột Tên Sách (Rộng 300)
-            float colSL = margin + 320;    // Cột SL (Rộng 50)
-            float colGia = margin + 380;   // Cột Đơn Giá (Rộng 130)
-            float colTien = margin + 520;  // Cột Thành Tiền (Rộng 150)
+            float colSL = margin + 300;    // Cột SL
+            float colGia = margin + 370;   // Cột Đơn Giá
+            float colTien = margin + 500;  // Cột Thành Tiền
 
             // Vẽ tiêu đề bảng
             g.DrawString("Tên Sách", fontTableBold, Brushes.Black, colTen, currentY);
@@ -64,10 +73,11 @@ namespace QuanLyCuaHangSach
             {
                 if (row.IsNewRow) continue;
 
-                string ten = row.Cells[1].Value?.ToString() ?? "";
-                string sl = row.Cells[2].Value?.ToString() ?? "0";
-                double gia = Convert.ToDouble(row.Cells[3].Value ?? 0);
-                double tien = Convert.ToDouble(row.Cells[4].Value ?? 0);
+                // Cập nhật Index cột khớp với Grid: STT(0), Mã(1), Tên(2), SL(3), Giá(4), Tiền(5)
+                string ten = row.Cells[2].Value?.ToString() ?? "";
+                string sl = row.Cells[3].Value?.ToString() ?? "0";
+                double gia = Convert.ToDouble(row.Cells[4].Value ?? 0);
+                double tien = Convert.ToDouble(row.Cells[5].Value ?? 0);
 
                 // Cột tên sách sử dụng RectangleF để tự động xuống dòng nếu quá dài (tránh tràn sang phải)
                 RectangleF rectTen = new RectangleF(colTen, currentY, 300, 40);

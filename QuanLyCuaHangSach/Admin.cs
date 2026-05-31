@@ -16,13 +16,61 @@ namespace QuanLyCuaHangSach
         {
             InitializeComponent();
         }
+<<<<<<< Updated upstream
+=======
+        private void Admin_Load(object sender, EventArgs e)
+        {
+            label2.Text = _hoTen.ToUpper();
+            label3.Text = _vaiTro;
+            timer1.Interval = 1000;
+            timer1.Tick += (s, ev) =>
+            {
+                lblThoiGian.Text = DateTime.Now.ToString("HH:mm:ss - dddd, dd/MM/yyyy",
+                    new System.Globalization.CultureInfo("vi-VN"));
+            };
+            timer1.Start();
+            lblThoiGian.Text = DateTime.Now.ToString("HH:mm:ss - dddd, dd/MM/yyyy",
+                new System.Globalization.CultureInfo("vi-VN"));
+        }
+
+
+>>>>>>> Stashed changes
         private void guna2Button1_Click(object sender, EventArgs e)
         {
 
             fChangePassWord change= new fChangePassWord();
             this.Hide();
             change.ShowDialog();
+<<<<<<< Updated upstream
             this.Show();
+=======
+        }
+
+        private void LoadFormToPanel(Form childForm)
+        {
+            pContent.Controls.Clear();
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pContent.Controls.Add(childForm);
+            childForm.Show();
+        }
+        private void btnHDKD_Click_1(object sender, EventArgs e) { LoadFormToPanel(new frmBCKinhDoanh()); }
+        private void guna2Button6_Click(object sender, EventArgs e) { LoadFormToPanel(new frmKhachHang()); }
+        private void guna2Button4_Click(object sender, EventArgs e) { LoadFormToPanel(new fNhanVien()); }
+        private void guna2Button3_Click(object sender, EventArgs e) { LoadFormToPanel(new fSanPham()); }
+        private void guna2Button5_Click(object sender, EventArgs e) { LoadFormToPanel(new frmNhaCungCap()); }
+        private void guna2Button11_Click(object sender, EventArgs e) { LoadFormToPanel(new frmBCNhap()); }
+        private void guna2Button10_Click(object sender, EventArgs e) { LoadFormToPanel(new frmBCBanHang()); }
+        private void guna2Button7_Click(object sender, EventArgs e) { LoadFormToPanel(new frmDSHoaDonNhap()); }
+        private void guna2Button8_Click(object sender, EventArgs e) { LoadFormToPanel(new frmDSHoaDonXuat()); }
+        private void btnLogOut_Click(object sender, EventArgs e) { this.Close(); }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            TTTaiKhoan frm = new TTTaiKhoan(_maNhanVien);
+            frm.ShowDialog();
+>>>>>>> Stashed changes
         }
     }
 }

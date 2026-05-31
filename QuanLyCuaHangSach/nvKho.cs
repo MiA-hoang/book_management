@@ -22,7 +22,27 @@ namespace QuanLyCuaHangSach
             fChangePassWord change = new fChangePassWord();
             this.Hide();
             change.ShowDialog();
+<<<<<<< Updated upstream
             this.Show();
+=======
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadFormToPanel(new frmHoaDonNhap(_maNhanVien, _hoTen));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message); // xem lỗi gì
+            }
+        }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            LoadFormToPanel(new frmNhaCungCap());
+>>>>>>> Stashed changes
         }
 
         private void guna2Button6_Click(object sender, EventArgs e)

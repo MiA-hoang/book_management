@@ -1,0 +1,90 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
+namespace QuanLyCuaHangSach
+{
+    public partial class frmDSHoaDonNhap : Form
+    {
+        public frmDSHoaDonNhap()
+        {
+            InitializeComponent();
+        }
+
+        private void frmDSHoaDonNhap_Load(object sender, EventArgs e)
+        {
+            LoadData();
+            LoadCombos();
+        }
+
+        private void LoadCombos()
+        {
+            DAO.Connect();
+            DAO.FillDataToCombo("SELECT ma_nha_cung_cap, ten_nha_cung_cap FROM tblNhaCungCap", cboNCCLoc, "ma_nha_cung_cap", "ten_nha_cung_cap");
+            DAO.Close();
+            cboNCCLoc.SelectedIndex = -1;
+        }
+
+        private void LoadData()
+        {
+            string sql = @"SELECT pn.ma_phieu_nhap, pn.ngay_nhap, ncc.ten_nha_cung_cap, nv.ho_ten, pn.tong_tien, pn.trang_thai, pn.ghi_chu 
+                           FROM tblPhieuNhap pn
+                           JOIN tblNhaCungCap ncc ON pn.ma_nha_cung_cap = ncc.ma_nha_cung_cap
+                           JOIN tblNhanVien nv ON pn.ma_nhan_vien = nv.ma_nhan_vien
+                           WHERE 1=1";
+
+            if (!string.IsNullOrEmpty(txtTimKiem.Text))
+                sql += $" AND pn.ma_phieu_nhap LIKE '%{txtTimKiem.Text}%'";
+
+            if (cboTrangThaiLoc.SelectedIndex > 0)
+                sql += $" AND pn.trang_thai = N'{cboTrangThaiLoc.Text}'";
+
+            if (cboNCCLoc.SelectedIndex != -1 && cboNCCLoc.SelectedValue != null)
+                sql += $" AND pn.ma_nha_cung_cap = {cboNCCLoc.SelectedValue}";
+
+            sql += $" AND pn.ngay_nhap BETWEEN '{dtTuNgay.Value:yyyy-MM-dd}' AND '{dtDenNgay.Value:yyyy-MM-dd}'";
+            sql += " ORDER BY pn.ngay_nhap DESC";
+
+            DAO.Connect();
+            DataTable dt = DAO.LoadDataToTable(sql);
+            dgvDSHoaDon.DataSource = dt;
+
+            // Tính toán thống kê
+            lblTongDon.Text = $"Tổng số hóa đơn: {dt.Rows.Count}";
+            double tongTien = 0;
+            foreach (DataRow dr in dt.Rows) tongTien += Convert.ToDouble(dr["tong_tien"]);
+            lblTongTien.Text = $"Tổng tiền nhập: {tongTien:N0} VNĐ";
+
+            DAO.Close();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e) => LoadData();
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            txtTimKiem.Clear();
+            cboTrangThaiLoc.SelectedIndex = 0;
+            cboNCCLoc.SelectedIndex = -1;
+            dtTuNgay.Value = new DateTime(2023, 1, 1);
+            dtDenNgay.Value = DateTime.Now;
+            LoadData();
+        }
+
+        private void dgvDSHoaDon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            string maHD = dgvDSHoaDon.Rows[e.RowIndex].Cells[0].Value.ToString();
+            // Bạn có thể mở một form chi tiết tại đây:
+            // frmChiTietHDNhap f = new frmChiTietHDNhap(maHD);
+            // f.ShowDialog();
+            // LoadData();
+        }
+    }
+}

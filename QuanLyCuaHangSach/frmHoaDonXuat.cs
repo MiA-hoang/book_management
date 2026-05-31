@@ -15,19 +15,25 @@ namespace QuanLyCuaHangSach
     public partial class frmHoaDonXuat : Form
     {
         private PrintDocument printDocument;
-        public frmHoaDonXuat()
+        private string _maNV, _tenNV;
+        // Parameterless ctor added for callers that don't pass employee info
+        public frmHoaDonXuat() : this(string.Empty, string.Empty) { }
+
+        public frmHoaDonXuat(string maNV, string tenNV)
         {
             InitializeComponent();
             printDocument = new PrintDocument();
+            this._maNV = maNV;
+            this._tenNV = tenNV;
         }
 
         private void FillCombos()
         {
             DAO.Connect();
-            DAO.FillDataToCombo("SELECT ma_khach_hang, ten_khach_hang FROM tblKhachHang", cboKhachHang, "ma_khach_hang", "ten_khach_hang");
+
             DAO.FillDataToCombo("SELECT ma_sach, ten_sach FROM tblSach", cboSach, "ma_sach", "ten_sach");
             DAO.Close();
-            cboKhachHang.SelectedIndex = -1;
+
             cboSach.SelectedIndex = -1;
         }
 
@@ -35,8 +41,13 @@ namespace QuanLyCuaHangSach
         {
             txtMaHDX.Enabled = false;
             txtGiaBan.ReadOnly = true;
+            txtNhanVien.ReadOnly = true;
             dtNgayXuat.Value = DateTime.Now;
-            txtTongTien.Text = "0";
+            txtTongTien.Text = "0 VNĐ";
+            // show current user if provided
+            if (txtNhanVien != null) txtNhanVien.Text = _tenNV ?? string.Empty;
+            // initialize customer payment
+            if (txtKhachDua != null) txtKhachDua.Text = "0";
             btnTaoMoi.FillColor = Color.FromArgb(96, 165, 250);
             btnThem.FillColor = Color.FromArgb(59, 130, 246);
             btnLuu.FillColor = Color.FromArgb(37, 99, 235);
@@ -44,8 +55,39 @@ namespace QuanLyCuaHangSach
             btnIn.FillColor = Color.FromArgb(30, 58, 138);
             btnIn.Click += btnIn_Click;
             cboSach.SelectedIndexChanged += cboSach_SelectedIndexChanged; // Đăng ký sự kiện lấy giá tự động
-            btnThoat.FillColor = Color.FromArgb(51, 65, 85);
+            txtSdt.TextChanged += txtSdt_TextChanged; // Đăng ký sự kiện tìm khách hàng
+
+            // btnThoat not present in this designer build; skip FillColor assignment
+            // Wire data grid events
+            if (dgvChiTiet != null) dgvChiTiet.CellValueChanged += dgvChiTiet_CellValueChanged;
+            // Recalculate change when customer payment changes
+            if (txtKhachDua != null) txtKhachDua.TextChanged += (s, ev) => TinhTienThua();
             FillCombos();
+        }
+
+        private void txtSdt_TextChanged(object sender, EventArgs e)
+        {
+            string sdt = txtSdt.Text.Trim();
+            // Khi gõ đủ 10 số (định dạng SĐT chuẩn VN) thì mới bắt đầu truy vấn
+            if (sdt.Length >= 10)
+            {
+                DAO.Connect();
+                string sql = $"SELECT ten_khach_hang, dia_chi FROM tblKhachHang WHERE so_dien_thoai = '{sdt}'";
+                DataTable dt = DAO.LoadDataToTable(sql);
+                if (dt.Rows.Count > 0)
+                {
+                    txtKhachHang.Text = dt.Rows[0]["ten_khach_hang"].ToString();
+                    txtDiachi.Text = dt.Rows[0]["dia_chi"].ToString();
+                    txtKhachHang.Tag = dt.Rows[0]["ma_khach_hang"]; // Lưu ID khách hàng
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy khách hàng với số điện thoại này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtKhachHang.Clear();
+                    txtDiachi.Clear();
+                }
+                DAO.Close();
+            }
         }
 
         private void btnIn_Click(object sender, EventArgs e)
@@ -59,7 +101,10 @@ namespace QuanLyCuaHangSach
                     InvoiceNumber = txtMaHDX.Text,
                     InvoiceDate = dtNgayXuat.Value,
                     PartyLabel = "Khách hàng",
-                    PartyName = cboKhachHang.Text,
+                    PartyName = txtKhachHang.Text,
+                    CustomerPhone = txtSdt.Text,
+                    CustomerAddress = txtDiachi.Text,
+                    EmployeeName = txtNhanVien.Text,
                     Data = dgvChiTiet,
                     TotalText = txtTongTien.Text
                 };
@@ -87,27 +132,50 @@ namespace QuanLyCuaHangSach
             if (cboSach.SelectedIndex != -1 && cboSach.SelectedValue != null)
             {
                 DAO.Connect();
-                string sql = "SELECT gia_ban FROM tblSach WHERE ma_sach = N'" + cboSach.SelectedValue.ToString() + "'";
-                txtGiaBan.Text = DAO.getFieldValue(sql);
+                string maSach = cboSach.SelectedValue.ToString();
+                DataTable dt = DAO.LoadDataToTable($"SELECT gia_ban, so_luong FROM tblSach WHERE ma_sach = N'{maSach}'");
+                if (dt.Rows.Count > 0)
+                {
+                    txtGiaBan.Text = Convert.ToDouble(dt.Rows[0]["gia_ban"]).ToString("N0");
+                    txtCon.Text = dt.Rows[0]["so_luong"].ToString();
+                }
                 DAO.Close();
             }
             else
             {
                 txtGiaBan.Clear();
+                txtCon.Clear();
             }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (cboSach.SelectedIndex == -1 || string.IsNullOrEmpty(txtSoLuong.Text))
+            if (cboSach.SelectedIndex == -1 || nudSoLuong == null)
             {
                 MessageBox.Show("Vui lòng chọn sách và nhập số lượng!");
                 return;
             }
 
-            if (cboSach.SelectedValue == null || !int.TryParse(txtSoLuong.Text, out int slMua) || slMua <= 0)
+            if (cboSach.SelectedValue == null)
             {
                 MessageBox.Show("Vui lòng chọn sách và nhập số lượng hợp lệ!");
+                return;
+            }
+
+            int slMua = 0;
+            try
+            {
+                slMua = Convert.ToInt32(nudSoLuong.Value);
+            }
+            catch
+            {
+                MessageBox.Show("Số lượng không hợp lệ!");
+                return;
+            }
+
+            if (slMua <= 0)
+            {
+                MessageBox.Show("Vui lòng nhập số lượng lớn hơn 0!");
                 return;
             }
             string maSach = cboSach.SelectedValue.ToString();
@@ -132,31 +200,51 @@ namespace QuanLyCuaHangSach
             // Kiểm tra trùng mã trong DataGridView
             foreach (DataGridViewRow row in dgvChiTiet.Rows)
             {
-                if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() == maSach)
+                if (row.Cells[1].Value != null && row.Cells[1].Value.ToString() == maSach)
                 {
-                    int slMoi = Convert.ToInt32(row.Cells[2].Value) + slMua;
+                    int slMoi = Convert.ToInt32(row.Cells[3].Value) + slMua;
                     if (slMoi > tonKho)
                     {
                         MessageBox.Show("Tổng số lượng trong đơn hàng vượt quá tồn kho!");
                         return;
                     }
-                    row.Cells[2].Value = slMoi;
-                    row.Cells[4].Value = slMoi * gia;
+                    row.Cells[3].Value = slMoi;
+                    row.Cells[5].Value = slMoi * gia;
                     TinhTongTien();
                     return;
                 }
             }
 
-            dgvChiTiet.Rows.Add(maSach, cboSach.Text, slMua, gia, thanhTien);
+            int stt = dgvChiTiet.Rows.Count + 1;
+            dgvChiTiet.Rows.Add(stt, maSach, cboSach.Text, slMua, gia, thanhTien);
             TinhTongTien();
+        }
+
+        private void dgvChiTiet_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == 3) // Cột Số lượng
+            {
+                int sl = Convert.ToInt32(dgvChiTiet.Rows[e.RowIndex].Cells[3].Value);
+                double gia = Convert.ToDouble(dgvChiTiet.Rows[e.RowIndex].Cells[4].Value);
+                dgvChiTiet.Rows[e.RowIndex].Cells[5].Value = sl * gia;
+                TinhTongTien();
+            }
         }
 
         private void TinhTongTien()
         {
             double tong = 0;
             foreach (DataGridViewRow row in dgvChiTiet.Rows)
-                tong += Convert.ToDouble(row.Cells[4].Value);
+                tong += Convert.ToDouble(row.Cells[5].Value);
             txtTongTien.Text = tong.ToString("N0") + " VNĐ";
+            TinhTienThua();
+        }
+
+        private void TinhTienThua()
+        {
+            double.TryParse(txtTongTien.Text.Replace(" VNĐ", "").Replace(",", ""), out double tong);
+            double.TryParse(txtKhachDua.Text, out double khachDua);
+            txtTienThua.Text = (khachDua - tong).ToString("N0") + " VNĐ";
         }
 
         private void btnTaoMoi_Click(object sender, EventArgs e)
@@ -164,17 +252,19 @@ namespace QuanLyCuaHangSach
             txtMaHDX.Text = "HDX" + DateTime.Now.ToString("ddMMyyHHmmss");
             dgvChiTiet.Rows.Clear();
             txtTongTien.Text = "0 VNĐ";
-            cboKhachHang.SelectedIndex = -1;
+            txtKhachHang.Clear();
+            txtSdt.Clear();
+            txtDiachi.Clear();
             cboSach.SelectedIndex = -1;
-            txtSoLuong.Clear();
+            if (nudSoLuong != null) nudSoLuong.Value = nudSoLuong.Minimum;
             txtGiaBan.Clear();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (dgvChiTiet.Rows.Count == 0 || cboKhachHang.SelectedIndex == -1)
+            if (dgvChiTiet.Rows.Count == 0)
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin khách hàng và sản phẩm!");
+                MessageBox.Show("Vui lòng nhập thông tin sản phẩm!");
                 return;
             }
 
@@ -183,31 +273,32 @@ namespace QuanLyCuaHangSach
             try
             {
                 // 1. Lưu Header
-                string sqlHD = "INSERT INTO tblHoaDonXuat(ma_hd_xuat, ma_khach_hang, ngay_xuat, tong_tien) VALUES (@ma, @kh, @ngay, @tien)";
+                string sqlHD = "INSERT INTO tblDonHang(ma_don_hang, ma_khach_hang, ngay_dat, tong_tien, ma_nhan_vien) VALUES (@ma, @kh, @ngay, @tien, @manv)";
                 SqlCommand cmdHD = new SqlCommand(sqlHD, DAO.con, trans);
                 cmdHD.Parameters.AddWithValue("@ma", txtMaHDX.Text);
-                cmdHD.Parameters.AddWithValue("@kh", cboKhachHang.SelectedValue);
+                cmdHD.Parameters.AddWithValue("@kh", txtKhachHang.Tag ?? (object)DBNull.Value);
                 cmdHD.Parameters.AddWithValue("@ngay", dtNgayXuat.Value);
                 cmdHD.Parameters.AddWithValue("@tien", Convert.ToDouble(txtTongTien.Text.Split(' ')[0]));
+                cmdHD.Parameters.AddWithValue("@manv", _maNV);
                 cmdHD.ExecuteNonQuery();
 
                 // 2. Lưu Details và Cập nhật Kho
                 foreach (DataGridViewRow row in dgvChiTiet.Rows)
                 {
                     if (row.IsNewRow) continue;
-                    string sqlCT = "INSERT INTO tblChiTietHDXuat(ma_hd_xuat, ma_sach, so_luong, gia_ban) VALUES (@ma, @ms, @sl, @gb)";
+                    string sqlCT = "INSERT INTO tblChiTietDonHang(ma_don_hang, ma_sach, so_luong, gia_ban) VALUES (@ma, @ms, @sl, @gb)";
                     SqlCommand cmdCT = new SqlCommand(sqlCT, DAO.con, trans);
                     cmdCT.Parameters.AddWithValue("@ma", txtMaHDX.Text);
-                    cmdCT.Parameters.AddWithValue("@ms", row.Cells[0].Value);
-                    cmdCT.Parameters.AddWithValue("@sl", Convert.ToInt32(row.Cells[2].Value));
-                    cmdCT.Parameters.AddWithValue("@gb", Convert.ToDouble(row.Cells[3].Value));
+                    cmdCT.Parameters.AddWithValue("@ms", row.Cells[1].Value);
+                    cmdCT.Parameters.AddWithValue("@sl", Convert.ToInt32(row.Cells[3].Value));
+                    cmdCT.Parameters.AddWithValue("@gb", Convert.ToDouble(row.Cells[4].Value));
                     cmdCT.ExecuteNonQuery();
 
                     // CẬP NHẬT TRỪ KHO
                     string sqlUpdateStock = "UPDATE tblSach SET so_luong = so_luong - @sl WHERE ma_sach = @ms";
                     SqlCommand cmdStock = new SqlCommand(sqlUpdateStock, DAO.con, trans);
-                    cmdStock.Parameters.AddWithValue("@sl", Convert.ToInt32(row.Cells[2].Value));
-                    cmdStock.Parameters.AddWithValue("@ms", row.Cells[0].Value);
+                    cmdStock.Parameters.AddWithValue("@sl", Convert.ToInt32(row.Cells[3].Value));
+                    cmdStock.Parameters.AddWithValue("@ms", row.Cells[1].Value);
                     cmdStock.ExecuteNonQuery();
                 }
 

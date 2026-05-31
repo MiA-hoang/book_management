@@ -49,8 +49,21 @@ namespace QuanLyCuaHangSach
         public static DataTable LoadDataToTable(string sql)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter(sql, DAO.con);
-            adapter.Fill(dt);
+            try
+            {
+                if (con == null || con.State == ConnectionState.Closed)
+                    Connect();
+
+                using (SqlDataAdapter adapter = new SqlDataAdapter(sql, DAO.con))
+                {
+                    adapter.Fill(dt);
+                }
+            }
+            catch (Exception)
+            {
+                // return empty table on error
+            }
+
             return dt;
         }
 
@@ -63,6 +76,7 @@ namespace QuanLyCuaHangSach
 
         public static void FillDataToCombo(string sql, ComboBox cmb, string Keyvalue, string DisplayValue)
         {
+<<<<<<< Updated upstream
             SqlDataAdapter mydataAdapter = new SqlDataAdapter(sql, con);
             DataTable dt = new DataTable();
             mydataAdapter.Fill(dt);
@@ -71,6 +85,24 @@ namespace QuanLyCuaHangSach
             cmb.DisplayMember = DisplayValue;
             cmb.DataSource = dt;
             cmb.SelectedIndex = -1; // Reset selection to avoid triggering events with incomplete binding
+=======
+            try
+            {
+                if (con == null || con.State == ConnectionState.Closed) Connect();
+                using (SqlDataAdapter mydataAdapter = new SqlDataAdapter(sql, con))
+                {
+                    DataTable dt = new DataTable();
+                    mydataAdapter.Fill(dt);
+                    cmb.DataSource = dt;
+                    cmb.ValueMember = Keyvalue;
+                    cmb.DisplayMember = DisplayValue;
+                }
+            }
+            catch (Exception)
+            {
+                // swallow - caller can handle empty datasource
+            }
+>>>>>>> Stashed changes
         }
 
         public static string getFieldValue(string sql)
@@ -78,6 +110,7 @@ namespace QuanLyCuaHangSach
             string value = "";
             try
             {
+<<<<<<< Updated upstream
                 if (con == null || con.State != ConnectionState.Open)
                 {
                     Connect();
@@ -107,20 +140,41 @@ namespace QuanLyCuaHangSach
                 MessageBox.Show($"Lỗi khi thực thi truy vấn: {ex.Message}\n\nSQL: {sql}",
                     "Lỗi truy vấn", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw;
+=======
+                if (con == null || con.State == ConnectionState.Closed) Connect();
+                using (SqlCommand cmd = new SqlCommand(sql, con))
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        value = reader.GetValue(0).ToString();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                // return empty on error
+>>>>>>> Stashed changes
             }
             return value;
         }
 
         public static bool CheckKey(string sql)
         {
-            SqlDataAdapter mydata = new SqlDataAdapter(sql, con);
-            DataTable table = new DataTable();
-            mydata.Fill(table);
-            if (table.Rows.Count > 0)
-                return true;
-
-            else
+            try
+            {
+                if (con == null || con.State == ConnectionState.Closed) Connect();
+                using (SqlDataAdapter mydata = new SqlDataAdapter(sql, con))
+                {
+                    DataTable table = new DataTable();
+                    mydata.Fill(table);
+                    return table.Rows.Count > 0;
+                }
+            }
+            catch (Exception)
+            {
                 return false;
+            }
         }
 
 

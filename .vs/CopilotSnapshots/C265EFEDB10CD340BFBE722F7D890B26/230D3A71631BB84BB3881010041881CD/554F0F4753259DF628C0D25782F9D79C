@@ -1,0 +1,126 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace QuanLyCuaHangSach
+{
+    public partial class frmDSHoaDonXuat : Form
+    {
+        public frmDSHoaDonXuat()
+        {
+            InitializeComponent();
+        }
+
+        private void frmDSHoaDonXuat_Load(object sender, EventArgs e)
+        {
+            dtDenNgay.Value = DateTime.Now;
+            LoadCombos();
+            Load_DataGridView();
+            frmDSHoaDonXuat_LoadedFinish();
+        }
+
+        public void frmDSHoaDonXuat_LoadedFinish()
+        {
+            try
+            {
+                this.btnChiTiet.Click += btnChiTiet_Click;
+                this.btnIn.Click += btnIn_Click;
+                this.btnXuatExcel.Click += btnXuatExcel_Click;
+            }
+            catch { }
+        }
+
+        private void LoadCombos()
+        {
+            DAO.Connect();
+            DAO.Close();
+            
+        }
+
+        private void Load_DataGridView()
+        {
+            string sql = @"SELECT dh.ma_don_hang, dh.ngay_dat, kh.ten_khach_hang, nv.ho_ten, dh.tong_tien, dh.trang_thai, dh.ghi_chu
+                           FROM tblDonHang dh
+                           JOIN tblKhachHang kh ON dh.ma_khach_hang = kh.ma_khach_hang
+                           JOIN tblNhanVien nv ON dh.ma_nhan_vien = nv.ma_nhan_vien
+                           WHERE 1=1";
+
+            if (!string.IsNullOrEmpty(txtTimKiem.Text)) sql += $" AND (dh.ma_don_hang LIKE '%{txtTimKiem.Text}%' OR kh.ten_khach_hang LIKE N'%{txtTimKiem.Text}%')";
+            if (cboTrangThaiLoc.SelectedIndex > 0) sql += $" AND dh.trang_thai = N'{cboTrangThaiLoc.Text}'";
+      
+            sql += $" AND dh.ngay_dat BETWEEN '{dtTuNgay.Value:yyyy-MM-dd}' AND '{dtDenNgay.Value:yyyy-MM-dd}'";
+            sql += " ORDER BY dh.ngay_dat DESC";
+
+            DAO.Connect();
+            DataTable dt = DAO.LoadDataToTable(sql);
+            dgvDSHoaDon.DataSource = dt;
+            double tong = 0;
+            foreach (DataRow r in dt.Rows) tong += Convert.ToDouble(r["tong_tien"]);
+            lblTongDoanhThu.Text = $"Tổng doanh thu: {tong:N0} VNĐ";
+            DAO.Close();
+        }
+
+        private void dgvDSHoaDon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            string maHD = dgvDSHoaDon.Rows[e.RowIndex].Cells[0].Value.ToString();
+            frmChiTietHoaDonXuat f = new frmChiTietHoaDonXuat(maHD, false);
+            f.ShowDialog();
+            Load_DataGridView();
+        }
+
+        private void btnChiTiet_Click(object sender, EventArgs e)
+        {
+            if (dgvDSHoaDon.CurrentRow == null) return;
+            string maHD = dgvDSHoaDon.CurrentRow.Cells[0].Value.ToString();
+            var f = new frmChiTietHoaDonXuat(maHD, false);
+            f.ShowDialog();
+            Load_DataGridView();
+        }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            if (dgvDSHoaDon.CurrentRow == null) return;
+            string maHD = dgvDSHoaDon.CurrentRow.Cells[0].Value.ToString();
+            var f = new frmChiTietHoaDonXuat(maHD, false);
+            f.ShowDialog();
+        }
+
+        private void btnXuatExcel_Click(object sender, EventArgs e)
+        {
+            DataTable dt = dgvDSHoaDon.DataSource as DataTable;
+            if (dt == null) return;
+            using (var sfd = new SaveFileDialog())
+            {
+                sfd.FileName = "DSHoaDonXuat.csv";
+                sfd.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*";
+                if (sfd.ShowDialog() != DialogResult.OK) return;
+                using (var sw = new System.IO.StreamWriter(sfd.FileName, false, System.Text.Encoding.UTF8))
+                {
+                    for (int i = 0; i < dt.Columns.Count; i++)
+                    {
+                        if (i > 0) sw.Write(',');
+                        sw.Write('"' + dt.Columns[i].ColumnName + '"');
+                    }
+                    sw.WriteLine();
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        for (int i = 0; i < dt.Columns.Count; i++)
+                        {
+                            if (i > 0) sw.Write(',');
+                            var val = row[i]?.ToString().Replace("\"", "\"\"") ?? string.Empty;
+                            sw.Write('"' + val + '"');
+                        }
+                        sw.WriteLine();
+                    }
+                }
+            }
+        }
+    }
+}

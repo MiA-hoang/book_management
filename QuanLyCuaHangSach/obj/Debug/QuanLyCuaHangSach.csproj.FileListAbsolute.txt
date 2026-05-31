@@ -49,6 +49,7 @@ D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmBCNhap.resources
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmHoaDonNhap.resources
 D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmHoaDonXuat.resources
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\Database.mdf
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\Database_log.ldf
@@ -56,22 +57,52 @@ D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\QuanLyCuaHangS
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\QuanLyCuaHangSach.exe
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\QuanLyCuaHangSach.pdb
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\Guna.UI2.dll
+=======
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\EPPlus.dll
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\EPPlus.Interfaces.dll
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\System.Buffers.dll
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\System.ComponentModel.Annotations.dll
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\System.Memory.dll
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\System.Numerics.Vectors.dll
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\System.Security.Cryptography.Xml.dll
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\EPPlus.xml
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\System.Buffers.xml
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\System.Memory.xml
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\System.Numerics.Vectors.xml
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\bin\Debug\System.Security.Cryptography.Xml.xml
+D:\Lập trình c#\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.TTTaiKhoan.resources
+>>>>>>> Stashed changes
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.csproj.AssemblyReference.cache
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.Admin.resources
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.fChangePassWord.resources
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.fLogin.resources
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.fNhanVien.resources
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmKhachHang.resources
 =======
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmBCBanHang.resources
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmBCKinhDoanh.resources
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmBCNhap.resources
+=======
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmBCBanHang.resources
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmBCKinhDoanh.resources
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmBCNhap.resources
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmChiTietHoaDonNhap.resources
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmChiTietHoaDonXuat.resources
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmDSHoaDonNhap.resources
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmDSHoaDonXuat.resources
+>>>>>>> Stashed changes
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmHoaDonNhap.resources
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmHoaDonXuat.resources
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmKhachHang.resources
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmNhaCungCap.resources
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.fSanPham.resources
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.NVBanSach.resources
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.nvKho.resources
@@ -85,4 +116,39 @@ D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangS
 D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.frmHoaDonNhap.resources
 >>>>>>> Stashed changes
 =======
+>>>>>>> Stashed changes
+=======
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.NVBanSach.resources
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.nvKho.resources
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.Properties.Resources.resources
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.TTTaiKhoan.resources
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.csproj.GenerateResource.cache
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.csproj.CoreCompileInputs.cache
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\Database.mdf
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\Database_log.ldf
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\QuanLyCuaHangSach.exe.config
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\QuanLyCuaHangSach.exe
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\QuanLyCuaHangSach.pdb
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\EPPlus.dll
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\EPPlus.Interfaces.dll
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\Guna.UI2.dll
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\System.Buffers.dll
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\System.ComponentModel.Annotations.dll
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\System.dll
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\System.Memory.dll
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\System.Numerics.Vectors.dll
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\System.Security.Cryptography.Xml.dll
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\EPPlus.xml
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\System.xml
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\System.Buffers.xml
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\System.Memory.xml
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\System.Numerics.Vectors.xml
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\bin\Debug\System.Security.Cryptography.Xml.xml
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCu.C3400158.Up2Date
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.exe
+D:\Tuyen\xampp\htdocs\book_management\QuanLyCuaHangSach\obj\Debug\QuanLyCuaHangSach.pdb
 >>>>>>> Stashed changes

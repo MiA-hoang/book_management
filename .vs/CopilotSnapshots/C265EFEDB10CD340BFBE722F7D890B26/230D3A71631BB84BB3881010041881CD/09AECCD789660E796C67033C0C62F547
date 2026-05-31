@@ -1,0 +1,61 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace QuanLyCuaHangSach
+{
+    public partial class frmDSHoaDonXuat : Form
+    {
+        public frmDSHoaDonXuat()
+        {
+            InitializeComponent();
+        }
+
+        private void frmDSHoaDonXuat_Load(object sender, EventArgs e) { dtDenNgay.Value = DateTime.Now; LoadCombos(); Load_DataGridView(); }
+
+        private void LoadCombos()
+        {
+            DAO.Connect();
+            DAO.Close();
+            
+        }
+
+        private void Load_DataGridView()
+        {
+            string sql = @"SELECT dh.ma_don_hang, dh.ngay_dat, kh.ten_khach_hang, nv.ho_ten, dh.tong_tien, dh.trang_thai, dh.ghi_chu
+                           FROM tblDonHang dh
+                           JOIN tblKhachHang kh ON dh.ma_khach_hang = kh.ma_khach_hang
+                           JOIN tblNhanVien nv ON dh.ma_nhan_vien = nv.ma_nhan_vien
+                           WHERE 1=1";
+
+            if (!string.IsNullOrEmpty(txtTimKiem.Text)) sql += $" AND (dh.ma_don_hang LIKE '%{txtTimKiem.Text}%' OR kh.ten_khach_hang LIKE N'%{txtTimKiem.Text}%')";
+            if (cboTrangThaiLoc.SelectedIndex > 0) sql += $" AND dh.trang_thai = N'{cboTrangThaiLoc.Text}'";
+      
+            sql += $" AND dh.ngay_dat BETWEEN '{dtTuNgay.Value:yyyy-MM-dd}' AND '{dtDenNgay.Value:yyyy-MM-dd}'";
+            sql += " ORDER BY dh.ngay_dat DESC";
+
+            DAO.Connect();
+            DataTable dt = DAO.LoadDataToTable(sql);
+            dgvDSHoaDon.DataSource = dt;
+            double tong = 0;
+            foreach (DataRow r in dt.Rows) tong += Convert.ToDouble(r["tong_tien"]);
+            lblTongDoanhThu.Text = $"Tổng doanh thu: {tong:N0} VNĐ";
+            DAO.Close();
+        }
+
+        private void dgvDSHoaDon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            string maHD = dgvDSHoaDon.Rows[e.RowIndex].Cells[0].Value.ToString();
+            frmChiTietHoaDonXuat f = new frmChiTietHoaDonXuat(maHD, false);
+            f.ShowDialog();
+            Load_DataGridView();
+        }
+    }
+}

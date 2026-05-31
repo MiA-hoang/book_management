@@ -1,0 +1,156 @@
+﻿namespace QuanLyCuaHangSach
+{
+    partial class frmDSHoaDonXuat
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.pnlTitle = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.pnlStatCount = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlStatRevenue = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnChiTiet = new Guna.UI2.WinForms.Guna2Button();
+            this.btnIn = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLamMoi = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlFilter = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnTimKiem = new Guna.UI2.WinForms.Guna2Button();
+            this.cboKHLoc = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cboTrangThaiLoc = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.dtDenNgay = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtTuNgay = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dgvDSHoaDon = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.pnlFooter = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblTongDoanhThu = new System.Windows.Forms.Label();
+            this.lblTongDon = new System.Windows.Forms.Label();
+            this.pnlFilter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHoaDon)).BeginInit();
+            this.pnlFooter.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // pnlFilter
+            // 
+            this.pnlFilter.Controls.Add(this.btnTimKiem);
+            this.pnlFilter.Controls.Add(this.cboKHLoc);
+            this.pnlFilter.Controls.Add(this.cboTrangThaiLoc);
+            this.pnlFilter.Controls.Add(this.dtDenNgay);
+            this.pnlFilter.Controls.Add(this.dtTuNgay);
+            this.pnlFilter.Controls.Add(this.txtTimKiem);
+            this.pnlFilter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlFilter.FillColor = System.Drawing.Color.White;
+            this.pnlFilter.Location = new System.Drawing.Point(0, 0);
+            this.pnlFilter.Name = "pnlFilter";
+            this.pnlFilter.Size = new System.Drawing.Size(1147, 110);
+            this.pnlFilter.TabIndex = 0;
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(12, 12);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.PlaceholderText = "Tìm theo mã HĐ hoặc tên KH...";
+            this.txtTimKiem.Size = new System.Drawing.Size(250, 36);
+            // 
+            // dgvDSHoaDon
+            // 
+            this.dgvDSHoaDon.AllowUserToAddRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvDSHoaDon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvDSHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            this.dgvDSHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvDSHoaDon.ColumnHeadersHeight = 40;
+            this.dgvDSHoaDon.Location = new System.Drawing.Point(0, 110);
+            this.dgvDSHoaDon.Name = "dgvDSHoaDon";
+            this.dgvDSHoaDon.ReadOnly = true;
+            this.dgvDSHoaDon.RowHeadersVisible = false;
+            this.dgvDSHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDSHoaDon.Size = new System.Drawing.Size(1147, 457);
+            this.dgvDSHoaDon.TabIndex = 1;
+            this.dgvDSHoaDon.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSHoaDon_CellDoubleClick);
+            // 
+            // pnlFooter
+            // 
+            this.pnlFooter.Controls.Add(this.lblTongDoanhThu);
+            this.pnlFooter.Controls.Add(this.lblTongDon);
+            this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlFooter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.pnlFooter.Location = new System.Drawing.Point(0, 572);
+            this.pnlFooter.Name = "pnlFooter";
+            this.pnlFooter.Size = new System.Drawing.Size(1147, 60);
+            this.pnlFooter.TabIndex = 2;
+            // 
+            // lblTongDoanhThu
+            // 
+            this.lblTongDoanhThu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTongDoanhThu.AutoSize = true;
+            this.lblTongDoanhThu.BackColor = System.Drawing.Color.Transparent;
+            this.lblTongDoanhThu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTongDoanhThu.ForeColor = System.Drawing.Color.Red;
+            this.lblTongDoanhThu.Location = new System.Drawing.Point(820, 16);
+            this.lblTongDoanhThu.Text = "Tổng doanh thu: 0 VNĐ";
+            // 
+            // frmDSHoaDonXuat
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1147, 632);
+            this.Controls.Add(this.dgvDSHoaDon);
+            this.Controls.Add(this.pnlFooter);
+            this.Controls.Add(this.pnlFilter);
+            this.Name = "frmDSHoaDonXuat";
+            this.Text = "frmDSHoaDonXuat";
+            this.Load += new System.EventHandler(this.frmDSHoaDonXuat_Load);
+            this.pnlFilter.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHoaDon)).EndInit();
+            this.pnlFooter.ResumeLayout(false);
+            this.pnlFooter.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private Guna.UI2.WinForms.Guna2Panel pnlFilter;
+        private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtTuNgay;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtDenNgay;
+        private Guna.UI2.WinForms.Guna2ComboBox cboTrangThaiLoc;
+        private Guna.UI2.WinForms.Guna2ComboBox cboKHLoc;
+        private Guna.UI2.WinForms.Guna2Button btnTimKiem;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvDSHoaDon;
+        private Guna.UI2.WinForms.Guna2Panel pnlFooter;
+        private System.Windows.Forms.Label lblTongDon;
+        private System.Windows.Forms.Label lblTongDoanhThu;
+    }
+}

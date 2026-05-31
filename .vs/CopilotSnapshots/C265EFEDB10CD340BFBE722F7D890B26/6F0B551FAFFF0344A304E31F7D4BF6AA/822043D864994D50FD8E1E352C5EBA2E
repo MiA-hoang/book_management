@@ -1,0 +1,192 @@
+﻿namespace QuanLyCuaHangSach
+{
+    partial class frmDSHoaDonNhap
+    {
+        private System.ComponentModel.IContainer components = null;
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        private void InitializeComponent()
+        {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.pnlHeader = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnLamMoi = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTimKiem = new Guna.UI2.WinForms.Guna2Button();
+            this.cboNCCLoc = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cboTrangThaiLoc = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.dtDenNgay = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtTuNgay = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dgvDSHoaDon = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.pnlFooter = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblTongTien = new System.Windows.Forms.Label();
+            this.lblTongDon = new System.Windows.Forms.Label();
+            this.btnXuatExcel = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHoaDon)).BeginInit();
+            this.pnlFooter.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // pnlHeader (Khu vực bộ lọc)
+            // 
+            this.pnlHeader.Controls.Add(this.btnLamMoi);
+            this.pnlHeader.Controls.Add(this.btnTimKiem);
+            this.pnlHeader.Controls.Add(this.cboNCCLoc);
+            this.pnlHeader.Controls.Add(this.cboTrangThaiLoc);
+            this.pnlHeader.Controls.Add(this.dtDenNgay);
+            this.pnlHeader.Controls.Add(this.dtTuNgay);
+            this.pnlHeader.Controls.Add(this.txtTimKiem);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.FillColor = System.Drawing.Color.White;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(1147, 120);
+            this.pnlHeader.TabIndex = 0;
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimKiem.DefaultText = "";
+            this.txtTimKiem.Location = new System.Drawing.Point(12, 12);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.PlaceholderText = "Tìm theo mã HĐ...";
+            this.txtTimKiem.Size = new System.Drawing.Size(250, 36);
+            this.txtTimKiem.TabIndex = 0;
+            // 
+            // dtTuNgay
+            // 
+            this.dtTuNgay.Checked = true;
+            this.dtTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtTuNgay.Location = new System.Drawing.Point(280, 12);
+            this.dtTuNgay.Name = "dtTuNgay";
+            this.dtTuNgay.Size = new System.Drawing.Size(150, 36);
+            this.dtTuNgay.TabIndex = 1;
+            this.dtTuNgay.Value = new System.DateTime(2023, 1, 1);
+            // 
+            // dtDenNgay
+            // 
+            this.dtDenNgay.Checked = true;
+            this.dtDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtDenNgay.Location = new System.Drawing.Point(440, 12);
+            this.dtDenNgay.Name = "dtDenNgay";
+            this.dtDenNgay.Size = new System.Drawing.Size(150, 36);
+            this.dtDenNgay.TabIndex = 2;
+            this.dtDenNgay.Value = System.DateTime.Now;
+            // 
+            // cboTrangThaiLoc
+            // 
+            this.cboTrangThaiLoc.Items.AddRange(new object[] { "Tất cả trạng thái", "Hoàn thành", "Trả hàng" });
+            this.cboTrangThaiLoc.Location = new System.Drawing.Point(12, 65);
+            this.cboTrangThaiLoc.Name = "cboTrangThaiLoc";
+            this.cboTrangThaiLoc.Size = new System.Drawing.Size(250, 36);
+            this.cboTrangThaiLoc.TabIndex = 3;
+            this.cboTrangThaiLoc.StartIndex = 0;
+            // 
+            // cboNCCLoc
+            // 
+            this.cboNCCLoc.Location = new System.Drawing.Point(280, 65);
+            this.cboNCCLoc.Name = "cboNCCLoc";
+            this.cboNCCLoc.Size = new System.Drawing.Size(310, 36);
+            this.cboNCCLoc.TabIndex = 4;
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.FillColor = System.Drawing.Color.FromArgb(37, 99, 235);
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.Location = new System.Drawing.Point(610, 12);
+            this.btnTimKiem.Size = new System.Drawing.Size(120, 36);
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.FillColor = System.Drawing.Color.FromArgb(71, 85, 105);
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.Location = new System.Drawing.Point(610, 65);
+            this.btnLamMoi.Size = new System.Drawing.Size(120, 36);
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
+            // dgvDSHoaDon
+            // 
+            this.dgvDSHoaDon.AllowUserToAddRows = false;
+            this.dgvDSHoaDon.ColumnHeadersHeight = 40;
+            this.dgvDSHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSHoaDon.Location = new System.Drawing.Point(0, 120);
+            this.dgvDSHoaDon.Name = "dgvDSHoaDon";
+            this.dgvDSHoaDon.ReadOnly = true;
+            this.dgvDSHoaDon.RowHeadersVisible = false;
+            this.dgvDSHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDSHoaDon.Size = new System.Drawing.Size(1147, 450);
+            this.dgvDSHoaDon.TabIndex = 1;
+            this.dgvDSHoaDon.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSHoaDon_CellDoubleClick);
+            // 
+            // pnlFooter
+            // 
+            this.pnlFooter.Controls.Add(this.btnXuatExcel);
+            this.pnlFooter.Controls.Add(this.lblTongTien);
+            this.pnlFooter.Controls.Add(this.lblTongDon);
+            this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlFooter.FillColor = System.Drawing.Color.FromArgb(240, 249, 255);
+            this.pnlFooter.Location = new System.Drawing.Point(0, 570);
+            this.pnlFooter.Name = "pnlFooter";
+            this.pnlFooter.Size = new System.Drawing.Size(1147, 60);
+            this.pnlFooter.TabIndex = 2;
+            // 
+            // lblTongDon
+            // 
+            this.lblTongDon.AutoSize = true;
+            this.lblTongDon.BackColor = System.Drawing.Color.Transparent;
+            this.lblTongDon.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTongDon.Location = new System.Drawing.Point(12, 20);
+            this.lblTongDon.Text = "Tổng số hóa đơn: 0";
+            // 
+            // lblTongTien
+            // 
+            this.lblTongTien.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblTongTien.AutoSize = true;
+            this.lblTongTien.BackColor = System.Drawing.Color.Transparent;
+            this.lblTongTien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTongTien.ForeColor = System.Drawing.Color.Red;
+            this.lblTongTien.Location = new System.Drawing.Point(850, 18);
+            this.lblTongTien.Text = "Tổng tiền nhập: 0 VNĐ";
+            // 
+            // frmDSHoaDonNhap
+            // 
+            this.ClientSize = new System.Drawing.Size(1147, 632);
+            this.Controls.Add(this.dgvDSHoaDon);
+            this.Controls.Add(this.pnlFooter);
+            this.Controls.Add(this.pnlHeader);
+            this.Name = "frmDSHoaDonNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "DANH SÁCH HÓA ĐƠN NHẬP";
+            this.Load += new System.EventHandler(this.frmDSHoaDonNhap_Load);
+            this.pnlHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHoaDon)).EndInit();
+            this.pnlFooter.ResumeLayout(false);
+            this.pnlFooter.PerformLayout();
+            this.ResumeLayout(false);
+        }
+
+        private Guna.UI2.WinForms.Guna2Panel pnlHeader;
+        private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtTuNgay;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtDenNgay;
+        private Guna.UI2.WinForms.Guna2ComboBox cboTrangThaiLoc;
+        private Guna.UI2.WinForms.Guna2ComboBox cboNCCLoc;
+        private Guna.UI2.WinForms.Guna2Button btnTimKiem;
+        private Guna.UI2.WinForms.Guna2Button btnLamMoi;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvDSHoaDon;
+        private Guna.UI2.WinForms.Guna2Panel pnlFooter;
+        private System.Windows.Forms.Label lblTongDon;
+        private System.Windows.Forms.Label lblTongTien;
+        private Guna.UI2.WinForms.Guna2Button btnXuatExcel;
+    }
+}
